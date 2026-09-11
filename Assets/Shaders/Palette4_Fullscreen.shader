@@ -6,10 +6,10 @@ Shader "Hidden/Custom/Palette4_Fullscreen"
     {
         [Header(Palette)]
         // Darkest to lightest. Swap two entries and the picture comes out inverted.
-        _Color0 ("Color 0 (darkest)",  Color) = (0.058, 0.219, 0.058, 1)
-        _Color1 ("Color 1",            Color) = (0.188, 0.384, 0.188, 1)
-        _Color2 ("Color 2",            Color) = (0.545, 0.674, 0.058, 1)
-        _Color3 ("Color 3 (lightest)", Color) = (0.608, 0.737, 0.058, 1)
+        _Color0 ("Color 0 (darkest)",  Color) = (0.100, 0.100, 0.100, 1)
+        _Color1 ("Color 1",            Color) = (0.250, 0.250, 0.250, 1)
+        _Color2 ("Color 2",            Color) = (0.750, 0.750, 0.750, 1)
+        _Color3 ("Color 3 (lightest)", Color) = (0.900, 0.900, 0.900, 1)
 
         [Header(Tone)]
         _Contrast   ("Contrast",   Range(0.1, 4)) = 1
