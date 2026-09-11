@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,16 +7,14 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody))]
 public class CharacterMovement : MonoBehaviour
 {
-    [Header("")]
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float rotationSpeed = 12f;
+    [Header("Movement Settings")]
+    [SerializeField, Tooltip("Base move speed of the character.")] private float moveSpeed = 5f;
+    [SerializeField, Tooltip("Base rotation speed of the character.")] private float rotationSpeed = 12f;
 
-    [Header("")]
-    [SerializeField, Tooltip("")] 
+    [Header("References")]
+    [SerializeField, Tooltip("Reference to the Input Action, not the whole Input Action Map.")] 
     private InputActionReference moveAction;
-
-    [Header("")]
-    [SerializeField, Tooltip("")]
+    [SerializeField, Tooltip("Reference to the Camera.")]
     private Transform cameraTransform;
 
     private Rigidbody _rb;

@@ -4,19 +4,19 @@ using UnityEngine.InputSystem;
 public class CharacterShoot : MonoBehaviour
 {
     [Header("Projectile")]
-    [SerializeField, Tooltip("")]
+    [SerializeField, Tooltip("Reference to the bullet prefab.")]
     private Bullet bulletPrefab;
-    [SerializeField, Tooltip("")]
+    [SerializeField, Tooltip("Reference to the FirePoint object, children of the Player object.")]
     private Transform firePoint;
-    [SerializeField, Tooltip("")]
+    [SerializeField, Tooltip("Base speed of the projectile.")]
     private float bulletSpeed;
 
     [Header("Input")]
-    [SerializeField, Tooltip("")]
+    [SerializeField, Tooltip("Reference to the Input Action, not the whole Input Action Map.")]
     private InputActionReference fireAction;
 
     [Header("References")]
-    [SerializeField, Tooltip("")]
+    [SerializeField, Tooltip("Reference to the Camera.")]
     private Camera aimCamera;
 
     private void Awake()
@@ -46,11 +46,10 @@ public class CharacterShoot : MonoBehaviour
 
     private void Fire()
     {
-        Vector3 aimPoint = GetMouseWorldPointOnPlane(firePoint.position.y);
-        Vector3 dir = aimPoint - firePoint.position;
+        Vector3 dir = firePoint.forward;
         dir.y = 0f;
 
-        if (dir.sqrMagnitude < 0.001f)
+        if (dir.sqrMagnitude < 0.0001f)
         {
             return;
         }
@@ -59,31 +58,5 @@ public class CharacterShoot : MonoBehaviour
 
         Bullet bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.LookRotation(dir));
         bullet.Shoot(dir, bulletSpeed);
-    }
-
-    private Vector3 GetMouseWorldPointOnPlane(float planeY)
-    {
-        Vector2 mousePos;
-
-        if (Mouse.current != null)
-        {
-            mousePos = Mouse.current.position.ReadValue();
-        }
-        else
-        {
-            mousePos = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
-        }
-
-        Ray ray = aimCamera.ScreenPointToRay(mousePos);
-        Plane ground = new Plane(Vector3.up, new Vector3(0f, planeY, 0f));
-
-        if (ground.Raycast(ray, out float distance) == true)
-        {
-            return ray.GetPoint(distance);
-        }
-        else
-        {
-            return firePoint.position + firePoint.forward;
-        }
     }
 }
