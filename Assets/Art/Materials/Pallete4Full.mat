@@ -35,7 +35,7 @@ Material:
     - _Contrast: 1.44
     - _DepthThreshold: 0.043
     - _DitherScale: 1
-    - _DitherStrength: 0
+    - _DitherStrength: 0.05
     - _EdgeStrength: 0.095
     - _EdgeThickness: 1
     - _GammaMatch: 1
