@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>{{{ PRODUCT_NAME }}} {{{ PRODUCT_VERSION }}}</title>
+    <style>
+      html, body { height: 100%; }
+
+      body {
+        margin: 0; padding: 0; border: 0;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      /*
+        The drawing buffer stays at the native 160x144. Everything below is the
+        browser blowing those 23040 pixels up, and the one rule that matters is
+        that it does it with nearest neighbour. The four vendor spellings are all
+        needed: Firefox wants crisp-edges, older WebKit wants optimize-contrast.
+      */
+      #unity-canvas {
+        display: block;
+        background: #000;
+        outline: none;
+        image-rendering: optimizeSpeed;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="unity-canvas" width="{{{ WIDTH }}}" height="{{{ HEIGHT }}}" tabindex="-1"></canvas>
+    <script src="Build/{{{ LOADER_FILENAME }}}"></script>
+    <script>
+      var canvas = document.querySelector("#unity-canvas");
+
+      // Native framebuffer, straight from Player Settings > Resolution (Web).
+      var NATIVE_WIDTH  = {{{ WIDTH }}};
+      var NATIVE_HEIGHT = {{{ HEIGHT }}};
+
+      // CSS size is always a whole multiple of the native size, so every game
+      // pixel is the same square. A fractional fit is what turns a 3px pixel
+      // into a 3px-and-sometimes-4px pixel, which reads as shimmer.
+      function fitCanvas() {
+        var scale = Math.floor(Math.min(window.innerWidth  / NATIVE_WIDTH,
+                                        window.innerHeight / NATIVE_HEIGHT));
+        if (!(scale >= 1)) scale = 1;   // also catches NaN on a zero-size window
+
+        canvas.style.width  = (NATIVE_WIDTH  * scale) + "px";
+        canvas.style.height = (NATIVE_HEIGHT * scale) + "px";
+      }
+
+      fitCanvas();
+      window.addEventListener("resize", fitCanvas);
+      document.addEventListener("fullscreenchange", fitCanvas);
+
+      createUnityInstance(canvas, {
+        arguments: [],
+        dataUrl: "Build/{{{ DATA_FILENAME }}}",
+        frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+#if USE_THREADS
+        workerUrl: "Build/{{{ WORKER_FILENAME }}}",
+#endif
+#if USE_WASM
+        codeUrl: "Build/{{{ CODE_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+        productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+        productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+
+        // Without this Unity resizes the drawing buffer to the CSS size times
+        // the device pixel ratio, and the render would silently go 4K. With it,
+        // canvas.width/height above are authoritative and the DPR is forced to 1.
+        matchWebGLToCanvasSize: false,
+      }).catch(function (message) {
+        // Deliberately not alert(): a modal here wedges the whole page.
+        console.error(message);
+      });
+    </script>
+  </body>
+</html>
