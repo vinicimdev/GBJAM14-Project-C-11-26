@@ -17,6 +17,8 @@ public class ShipControlInteract : MonoBehaviour
     [SerializeField, Tooltip("")]
     private Rigidbody playerRigidbody;
     [SerializeField, Tooltip("")]
+    private Collider playerCollider;
+    [SerializeField, Tooltip("")]
     private Transform helmStandPoint;
 
     [Header("Ship")]
@@ -30,6 +32,8 @@ public class ShipControlInteract : MonoBehaviour
     private CameraFollow cameraFollow;
     [SerializeField, Tooltip("")]
     private bool snapCameraOnSwitch = false;
+    [SerializeField, Tooltip("")]
+    private float shipCameraZoomMultiplier = 1.5f;
 
     [Header("Input")]
     [SerializeField, Tooltip("")]
@@ -42,7 +46,8 @@ public class ShipControlInteract : MonoBehaviour
     private bool _playerInside;
     private float _holdTimer;
     private bool _waitingForRelease;
-    private Transform _playerOriginalParent;
+    private Vector3 _playerLocalPos;
+    private Quaternion _playerLocalRot;
 
     private void Awake()
     {
@@ -126,21 +131,56 @@ public class ShipControlInteract : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (HasTakenControl == false)
+        {
+            return;
+        }
+
+        Vector3 worldPos = shipMovement.transform.TransformPoint(_playerLocalPos);
+        Quaternion worldRot = shipMovement.transform.rotation * _playerLocalRot;
+
+        playerRigidbody.MovePosition(worldPos);
+        playerRigidbody.MoveRotation(worldRot);
+    }
+
     private void TakeControl()
     {
         playerMovement.enabled = false;
 
-        _playerOriginalParent = playerMovement.transform.parent;
-        playerMovement.transform.SetParent(shipMovement.transform, worldPositionStays: true);
+        Vector3 targetPos;
+        Quaternion targetRot;
 
         if (helmStandPoint != null)
         {
-            playerMovement.transform.SetPositionAndRotation(helmStandPoint.position, helmStandPoint.rotation);
+            targetPos = helmStandPoint.position;
         }
+        else
+        {
+            targetPos = playerMovement.transform.position;
+        }
+
+        if (helmStandPoint != null)
+        {
+            targetRot = helmStandPoint.rotation;
+        }
+        else
+        {
+            targetRot = playerMovement.transform.rotation;
+        }
+
+        _playerLocalPos = shipMovement.transform.InverseTransformPoint(targetPos);
+        _playerLocalRot = Quaternion.Inverse(shipMovement.transform.rotation) * targetRot;
 
         playerRigidbody.linearVelocity = Vector3.zero;
         playerRigidbody.angularVelocity = Vector3.zero;
         playerRigidbody.isKinematic = true;
+
+        playerRigidbody.position = targetPos;
+        playerRigidbody.rotation = targetRot;
+
+        playerCollider.enabled = false;
 
         shipRigidbody.constraints = RigidbodyConstraints.None;
         shipRigidbody.WakeUp();
@@ -148,13 +188,15 @@ public class ShipControlInteract : MonoBehaviour
         shipMovement.enabled = true;
 
         cameraFollow.SetTarget(shipMovement.transform, snapCameraOnSwitch);
+        cameraFollow.SetOffsetMultiplier(shipCameraZoomMultiplier);
 
         HasTakenControl = true;
     }
 
     private void ReleaseControl()
     {
-        playerMovement.transform.SetParent(_playerOriginalParent, worldPositionStays: true);
+        playerCollider.enabled = true;
+
         playerRigidbody.isKinematic = false;
 
         shipRigidbody.linearVelocity = Vector3.zero;
@@ -165,6 +207,7 @@ public class ShipControlInteract : MonoBehaviour
         playerMovement.enabled = true;
 
         cameraFollow.SetTarget(playerMovement.transform, snapCameraOnSwitch);
+        cameraFollow.SetOffsetMultiplier(1f);
 
         HasTakenControl = false;
     }

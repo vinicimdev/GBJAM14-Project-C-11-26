@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -27,7 +28,15 @@ public class CameraFollow : MonoBehaviour
     [SerializeField, Tooltip("")]
     private Vector3 isometricEuler = new(30f, 45f, 0f);
 
+    [Header("Zoom")]
+    [SerializeField, Tooltip(""), Range(0.05f, 2f)]
+    private float zoomTransitionTime = 0.6f;
+
+
     private Vector3 _velocity;
+    private float _offsetMultiplier = 1f;
+    private float _targetMultiplier = 1f;
+    private float _multiplierVelocity;
 
     private void Start()
     {
@@ -45,13 +54,15 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
+        _offsetMultiplier = Mathf.SmoothDamp(_offsetMultiplier, _targetMultiplier, ref _multiplierVelocity, zoomTransitionTime);
+
         Vector3 desired = GetDesiredPosition();
         transform.position = Vector3.SmoothDamp(transform.position, desired, ref _velocity, smoothTime, maxSpeed);
     }
 
     private Vector3 GetDesiredPosition()
     {
-        return target.position + targetOffset + cameraOffset;
+        return target.position + targetOffset + cameraOffset * _offsetMultiplier;
     }
 
     /// <summary>
@@ -68,6 +79,11 @@ public class CameraFollow : MonoBehaviour
             transform.position = GetDesiredPosition();
             _velocity = Vector3.zero;
         }
+    }
+
+    public void SetOffsetMultiplier(float multiplier)
+    {
+        _targetMultiplier = multiplier;
     }
 
     /// <summary>
