@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2501945517763031278}
   - component: {fileID: -1874961741853098669}
   - component: {fileID: 4501576253519671151}
-  - component: {fileID: -6172003515206141089}
+  - component: {fileID: 3296631336759575465}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -80,33 +80,21 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!54 &-6172003515206141089
-Rigidbody:
+--- !u!114 &3296631336759575465
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4810998831328396516}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8265ab1a5e2506445a82b4cac3f12023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  detectionRange: 20
+  stopDistance: 1.5
+  updateInterval: 0.2
 --- !u!1001 &8698663081120101892
 PrefabInstance:
   m_ObjectHideFlags: 0
