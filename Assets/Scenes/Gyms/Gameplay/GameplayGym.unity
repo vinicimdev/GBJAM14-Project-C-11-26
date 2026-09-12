@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 451789074}
   - component: {fileID: 451789073}
   - component: {fileID: 451789072}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Deck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -880,7 +880,7 @@ GameObject:
   - component: {fileID: 1039041684}
   - component: {fileID: 1039041686}
   - component: {fileID: 1039041685}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1039,11 +1039,13 @@ MonoBehaviour:
   holdDuration: 1
   playerMovement: {fileID: 2467851645623760200}
   playerRigidbody: {fileID: 2467851645623760201}
+  playerCollider: {fileID: 2467851645623760202}
   helmStandPoint: {fileID: 1116068178}
   shipMovement: {fileID: 1899377129}
   shipRigidbody: {fileID: 1899377130}
   cameraFollow: {fileID: 1902227486}
   snapCameraOnSwitch: 0
+  shipCameraZoomMultiplier: 3
   interactAction: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
 --- !u!65 &1116068180
 BoxCollider:
@@ -1190,7 +1192,7 @@ GameObject:
   - component: {fileID: 1233111314}
   - component: {fileID: 1233111316}
   - component: {fileID: 1233111315}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rudder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1790,7 +1792,7 @@ GameObject:
   - component: {fileID: 1741028876}
   - component: {fileID: 1741028875}
   - component: {fileID: 1741028874}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1904,7 +1906,7 @@ GameObject:
   - component: {fileID: 1899377130}
   - component: {fileID: 1899377129}
   - component: {fileID: 1899377128}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ship
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2149,6 +2151,7 @@ MonoBehaviour:
   maxSpeed: 100
   applyIsometricRotation: 1
   isometricEuler: {x: 30, y: 45, z: 0}
+  zoomTransitionTime: 0.6
 --- !u!1 &1987647189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2161,7 +2164,7 @@ GameObject:
   - component: {fileID: 1987647193}
   - component: {fileID: 1987647192}
   - component: {fileID: 1987647191}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2273,6 +2276,10 @@ PrefabInstance:
       propertyPath: aimCamera
       value: 
       objectReference: {fileID: 1902227484}
+    - target: {fileID: 2137488119889159732, guid: 267567f7e0957ec4ab1fbac9092aa7c4, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2591762558033718646, guid: 267567f7e0957ec4ab1fbac9092aa7c4, type: 3}
       propertyPath: cameraTransform
       value: 
@@ -2280,6 +2287,10 @@ PrefabInstance:
     - target: {fileID: 3532479338910953436, guid: 267567f7e0957ec4ab1fbac9092aa7c4, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532479338910953436, guid: 267567f7e0957ec4ab1fbac9092aa7c4, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3532479338910953436, guid: 267567f7e0957ec4ab1fbac9092aa7c4, type: 3}
       propertyPath: m_IsActive
@@ -2369,6 +2380,11 @@ MonoBehaviour:
 --- !u!54 &2467851645623760201 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 3890613394332255587, guid: 267567f7e0957ec4ab1fbac9092aa7c4, type: 3}
+  m_PrefabInstance: {fileID: 2467851645623760197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &2467851645623760202 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 9084411918933785595, guid: 267567f7e0957ec4ab1fbac9092aa7c4, type: 3}
   m_PrefabInstance: {fileID: 2467851645623760197}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
