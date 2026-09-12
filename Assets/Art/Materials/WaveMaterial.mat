@@ -40,16 +40,20 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _angleX: 67
+    - _angleZ: 0
     - _frequencyX: 1
     - _frequencyY: 1
     - _frequencyZ: 1
     - _normalDivide: 6
-    - _normalWaveAmplitudeX: 4
-    - _normalWaveAmplitudeZ: 4
+    - _normalWaveAmplitudeX: 1
+    - _normalWaveAmplitudeZ: 1
     - _timeSpeed: 1
     - _waveAmplitudeX: 0.1
     - _waveAmplitureY: 0.1
     - _waveAmplitureZ: 0.1
+    - _wavesX: 3
+    - _wavesZ: 3
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
