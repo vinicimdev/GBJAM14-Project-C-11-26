@@ -45,17 +45,17 @@ Material:
     - _angleZ: 18
     - _frequencyW: 2
     - _frequencyX: 1
-    - _frequencyY: 3
+    - _frequencyY: 0
     - _frequencyZ: 1
     - _normalDivide: 6
     - _normalWaveAmplitudeW: 1
     - _normalWaveAmplitudeX: 1
     - _normalWaveAmplitudeZ: 1
     - _timeSpeed: 1
-    - _waveAmplitudeW: 0.025
-    - _waveAmplitudeX: 0.05
-    - _waveAmplitureY: 0.001
-    - _waveAmplitureZ: 0.075
+    - _waveAmplitudeW: 0.00625
+    - _waveAmplitudeX: 0.0125
+    - _waveAmplitureY: 0
+    - _waveAmplitureZ: 0.01875
     - _wavesW: 2
     - _wavesX: 3
     - _wavesZ: 1
