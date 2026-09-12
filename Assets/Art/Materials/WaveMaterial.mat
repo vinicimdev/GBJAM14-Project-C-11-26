@@ -44,10 +44,12 @@ Material:
     - _frequencyY: 1
     - _frequencyZ: 1
     - _normalDivide: 6
+    - _normalWaveAmplitudeX: 4
+    - _normalWaveAmplitudeZ: 4
     - _timeSpeed: 1
-    - _waveAmplitudeX: 0.3
+    - _waveAmplitudeX: 0.1
     - _waveAmplitureY: 0.1
-    - _waveAmplitureZ: 0.5
+    - _waveAmplitureZ: 0.1
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
