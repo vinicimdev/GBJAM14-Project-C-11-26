@@ -2495,8 +2495,8 @@
     "m_ObjectId": "0526d81a00954b838869c7e1a600c199",
     "m_Title": "Normal Wave W",
     "m_Position": {
-        "x": -6063.00048828125,
-        "y": 2385.000244140625
+        "x": -6063.0,
+        "y": 2385.0
     }
 }
 
@@ -4569,16 +4569,16 @@
     "m_Type": "UnityEditor.ShaderGraph.AddNode",
     "m_ObjectId": "2c529aa247394300af1d5bcc382da125",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "6ec31252a39a4b8d849a304da3784b66"
     },
     "m_Name": "Add",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -413.00006103515627,
-            "y": 2423.0,
-            "width": 208.0,
+            "x": -256.00006103515627,
+            "y": 2369.000244140625,
+            "width": 208.00001525878907,
             "height": 302.0
         }
     },
@@ -7110,8 +7110,8 @@
     "m_ObjectId": "5a52487746e745cb86648f507356695a",
     "m_Title": "Wave X",
     "m_Position": {
-        "x": -4043.000244140625,
-        "y": -684.0000610351563
+        "x": -4043.0,
+        "y": -684.0
     }
 }
 
@@ -7361,7 +7361,7 @@
     "m_Title": "Normal Wave Z",
     "m_Position": {
         "x": -3277.0,
-        "y": 3945.000244140625
+        "y": 3945.0
     }
 }
 
@@ -7997,8 +7997,8 @@
     "m_ObjectId": "6ec31252a39a4b8d849a304da3784b66",
     "m_Title": "Normal Combine",
     "m_Position": {
-        "x": 87.9999771118164,
-        "y": 2316.000244140625
+        "x": -281.0,
+        "y": 2310.0
     }
 }
 
@@ -8216,7 +8216,7 @@
     "m_Title": "Normal Wave X",
     "m_Position": {
         "x": -6069.0,
-        "y": 3273.000244140625
+        "y": 3273.0
     }
 }
 
@@ -9060,8 +9060,8 @@
     "m_ObjectId": "82f82bb87bf04cf181f7a08dab30cd90",
     "m_Title": "Wave Z",
     "m_Position": {
-        "x": -4078.000244140625,
-        "y": 254.00003051757813
+        "x": -4078.0,
+        "y": 254.0
     }
 }
 
@@ -9136,7 +9136,7 @@
     "m_Title": "Wave W",
     "m_Position": {
         "x": -3805.0,
-        "y": -1670.000244140625
+        "y": -1670.0
     }
 }
 
@@ -9574,17 +9574,17 @@
     "m_Type": "UnityEditor.ShaderGraph.AddNode",
     "m_ObjectId": "8fe599111c3240fa84be8464415c540a",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "b62fc3516aef4917984e31df843c9f1a"
     },
     "m_Name": "Add",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -403.9998474121094,
-            "y": -297.0,
-            "width": 207.99990844726563,
-            "height": 302.00006103515627
+            "x": -226.99993896484376,
+            "y": -94.99993896484375,
+            "width": 208.00006103515626,
+            "height": 302.0
         }
     },
     "m_Slots": [
@@ -11119,8 +11119,8 @@
     "m_ObjectId": "a74f47c8691a4e698cfcb8a505de5393",
     "m_Title": "Wave Y",
     "m_Position": {
-        "x": -1132.9998779296875,
-        "y": -1976.0001220703125
+        "x": -1133.0,
+        "y": -1976.0
     }
 }
 
@@ -11840,8 +11840,8 @@
     "m_ObjectId": "b62fc3516aef4917984e31df843c9f1a",
     "m_Title": "Waves Combine with Position",
     "m_Position": {
-        "x": 82.0000228881836,
-        "y": 118.0000228881836
+        "x": -252.0,
+        "y": -154.0
     }
 }
 
