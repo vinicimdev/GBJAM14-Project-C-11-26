@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -1874961741853098669}
   - component: {fileID: 4501576253519671151}
   - component: {fileID: 3296631336759575465}
+  - component: {fileID: 2031989683096891667}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -95,6 +96,21 @@ MonoBehaviour:
   detectionRange: 20
   stopDistance: 1.5
   updateInterval: 0.2
+--- !u!114 &2031989683096891667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4810998831328396516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab867ba0636e8544b0b1fcde26bcbe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  attackRange: 1.8
+  attackDamage: 1
+  attackCooldown: 1
 --- !u!1001 &8698663081120101892
 PrefabInstance:
   m_ObjectHideFlags: 0
