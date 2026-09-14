@@ -1,7 +1,5 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 /// <summary>
 /// Enemy chase script, using NavMesh.
@@ -31,11 +29,16 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start()
     {
-        GameObject player = FindAnyObjectByType<CharacterMovement>().gameObject;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
 
         if (player != null)
         {
             _playerTransform = player.transform;
+        }
+
+        if (_agent.isOnNavMesh == false)
+        {
+            Debug.LogWarning($"[{nameof(EnemyMovement)}] '{name}' spawned outside of the NavMesh and won't walk.");
         }
     }
 
