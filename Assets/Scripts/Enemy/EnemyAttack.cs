@@ -13,30 +13,38 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField, Tooltip("")]
     private float attackCooldown = 1f;
 
-    private Transform _playerTransform;
-    private CharacterHealth _playerHealth;
+    private EnemyMovement _movement;
     private float _nextAttackTime;
 
-    private void Start()
+    private void Awake()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-
-        _playerTransform = player.transform;
-        _playerHealth = player.GetComponent<CharacterHealth>();
+        _movement = GetComponent<EnemyMovement>();
     }
 
     private void Update()
     {
+        CharacterHealth target = _movement.CurrentTarget;
+
+        if (target == null)
+        {
+            return;
+        }
+
+        if (target.IsDead == true)
+        {
+            return;
+        }
+
         if (Time.time < _nextAttackTime)
         {
             return;
         }
 
-        float dist = Vector3.Distance(transform.position, _playerTransform.position);
+        float dist = Vector3.Distance(transform.position, target.transform.position);
 
         if (dist <= attackRange)
         {
-            _playerHealth.TakeDamage(attackDamage);
+            target.TakeDamage(attackDamage);
             _nextAttackTime = Time.time + attackCooldown;
         }
     }
