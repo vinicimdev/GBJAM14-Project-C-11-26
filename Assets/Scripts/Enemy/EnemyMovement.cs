@@ -17,8 +17,10 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField, Tooltip("")]
     private float updateInterval = 0.2f;
 
+    public CharacterHealth CurrentTarget { get; private set; }
+
     private NavMeshAgent _agent;
-    private Transform _playerTransform;
+    private CharacterHealth[] _potentialTargets;
     private float _nextUpdateTime;
 
     private void Awake()
@@ -29,12 +31,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-
-        if (player != null)
-        {
-            _playerTransform = player.transform;
-        }
+        _potentialTargets = FindObjectsByType<CharacterHealth>(FindObjectsSortMode.None);
 
         if (_agent.isOnNavMesh == false)
         {
@@ -44,7 +41,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        if (_playerTransform == null || _agent.isOnNavMesh == false)
+        if (_agent.isOnNavMesh == false)
         {
             return;
         }
@@ -56,16 +53,58 @@ public class EnemyMovement : MonoBehaviour
 
         _nextUpdateTime = Time.time + updateInterval;
 
-        float dist = Vector3.Distance(transform.position, _playerTransform.position);
+        CurrentTarget = FindClosestTarget();
+
+        if (CurrentTarget == null)
+        {
+            if (_agent.hasPath == true)
+            {
+                _agent.ResetPath();
+            }
+
+            return;
+        }
+
+        float dist = Vector3.Distance(transform.position, CurrentTarget.transform.position);
 
         if (dist <= detectionRange)
         {
-            _agent.SetDestination(_playerTransform.position);
+            _agent.SetDestination(CurrentTarget.transform.position);
         }
-        else if (_agent.hasPath)
+        else if (_agent.hasPath == true)
         {
             _agent.ResetPath();
         }
+    }
+
+    private CharacterHealth FindClosestTarget()
+    {
+        CharacterHealth closest = null;
+        float closestDist = float.MaxValue;
+
+        foreach (CharacterHealth target in _potentialTargets)
+        {
+
+            if (target == null)
+            {
+                continue;
+            }
+
+            if (target.IsDead == true)
+            {
+                continue;
+            }
+
+            float dist = Vector3.Distance(transform.position, target.transform.position);
+
+            if (dist < closestDist)
+            {
+                closestDist = dist;
+                closest = target;
+            }
+        }
+
+        return closest;
     }
 
     private void OnDrawGizmosSelected()
