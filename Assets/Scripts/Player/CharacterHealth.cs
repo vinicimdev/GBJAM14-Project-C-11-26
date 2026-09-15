@@ -31,6 +31,8 @@ public class CharacterHealth : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        Debug.Log($"{name} got hit, damage: {amount}! Health left: {CurrentHealth}.");
+
         if (IsDead) return;
 
         if (IsInvincible) return;
@@ -49,5 +51,14 @@ public class CharacterHealth : MonoBehaviour
         }
     }
 
-    // TODO: Heal method?
+    public void Heal(int amount)
+    {
+        if (amount <= 0)
+        {
+            return;
+        }
+
+        CurrentHealth = Mathf.Min(maxHealth, CurrentHealth + amount);
+        OnHealthChanged?.Invoke(CurrentHealth);
+    }
 }
