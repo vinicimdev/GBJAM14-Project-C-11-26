@@ -12,12 +12,15 @@ public class HealthBarController : MonoBehaviour
     [SerializeField, Tooltip("")]
     private Slider slider;
 
-    private void OnEnable()
+    private void Start()
     {
         slider.minValue = 0f;
         slider.maxValue = health.MaxHealth;
         slider.value = health.CurrentHealth;
+    }
 
+    private void OnEnable()
+    {
         health.OnHealthChanged += UpdateSlider;
     }
 
