@@ -5,8 +5,11 @@ using UnityEngine;
 /// </summary>
 public class Bullet : MonoBehaviour
 {
+    [Header("Bullet Settings")]
     [SerializeField, Tooltip("")]
     private float lifetime = 3f;
+    [SerializeField, Tooltip("")]
+    private int damage = 1;
 
     private Vector3 _direction;
     private float _speed;
@@ -34,16 +37,14 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Just in case we forget to disable the bullet tag collision with the player tag
-        // on the layer collision matrix
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Chest"))
         {
             return;
         }
 
-        if (other.CompareTag("Enemy"))
+        if (other.TryGetComponent(out CharacterHealth health))
         {
-            Destroy(other.gameObject);
+            health.TakeDamage(damage);
             Destroy(gameObject);
         }
     }
