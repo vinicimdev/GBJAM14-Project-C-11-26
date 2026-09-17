@@ -52,10 +52,10 @@ Material:
     - _normalWaveAmplitudeX: 1
     - _normalWaveAmplitudeZ: 1
     - _timeSpeed: 1
-    - _waveAmplitudeW: 0.05
-    - _waveAmplitudeX: 0.05
+    - _waveAmplitudeW: 0.025
+    - _waveAmplitudeX: 0.025
     - _waveAmplitureY: 0
-    - _waveAmplitureZ: 0.05
+    - _waveAmplitureZ: 0.025
     - _wavesW: 2
     - _wavesX: 3
     - _wavesZ: 1
