@@ -65,7 +65,10 @@ public class CharacterMovement : MonoBehaviour
 
         _moveDirection = CameraRelativeDirection(_inputRaw);
 
-        characterAnimatorController.SetMoving(_moveDirection.sqrMagnitude > 0.01f);
+        if (characterAnimatorController != null)
+        {
+            characterAnimatorController.SetMoving(_moveDirection.sqrMagnitude > 0.01f);
+        }
     }
 
     private void FixedUpdate()
