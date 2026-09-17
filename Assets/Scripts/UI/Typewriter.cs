@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -11,13 +12,25 @@ public class Typewriter : MonoBehaviour
     [SerializeField] float charsPerSecond = 24f;
     [SerializeField] float punctuationPause = 0.25f;
     [SerializeField, Min(1)] int blipEvery = 3;
-    [SerializeField] string displayText = "";
+
+    [Header("Standalone playback")]
+    [SerializeField, Tooltip("Plays displayText on its own at Start. Turn this off once a CutsceneDirector drives this typewriter.")]
+    bool playOnStart = true;
+    [SerializeField, TextArea(3, 10)] string displayText = "";
+
+    // Raised once the final page has been dismissed.
+    public event Action Finished;
+    public bool IsPlaying { get; private set; }
 
     bool Pressed => submit.action.WasPressedThisFrame();
 
     void Awake() => tmp.overflowMode = TextOverflowModes.Page;
     void OnEnable() => submit.action.Enable();
-    void Start() => Play(tmp.text);
+
+    void Start()
+    {
+        if (playOnStart) Play(displayText);
+    }
 
     public Coroutine Play(string text)
     {
@@ -25,11 +38,22 @@ public class Typewriter : MonoBehaviour
         return StartCoroutine(Run(text));
     }
 
+    public void Clear()
+    {
+        StopAllCoroutines();
+        IsPlaying = false;
+        tmp.text = "";
+        tmp.maxVisibleCharacters = 0;
+    }
+
     IEnumerator Run(string text)
     {
-        tmp.text = displayText;
+        IsPlaying = true;
+
+        tmp.text = text;              
         tmp.pageToDisplay = 1;
         tmp.ForceMeshUpdate();
+        tmp.maxVisibleCharacters = 0;
 
         for (int page = 0; page < tmp.textInfo.pageCount; page++)
         {
@@ -37,9 +61,12 @@ public class Typewriter : MonoBehaviour
             TMP_PageInfo info = tmp.textInfo.pageInfo[page];
             yield return Reveal(info.firstCharacterIndex, info.lastCharacterIndex + 1);
 
-            yield return null; // wait a frame so one press can't do two things
+            yield return null;          // one press can't do two things
             while (!Pressed) yield return null;
         }
+
+        IsPlaying = false;
+        Finished?.Invoke();
     }
 
     IEnumerator Reveal(int from, int to)
@@ -50,7 +77,7 @@ public class Typewriter : MonoBehaviour
 
         while (shown < to)
         {
-            yield return null; // same reason as above
+            yield return null;
 
             if (Pressed)
             {
