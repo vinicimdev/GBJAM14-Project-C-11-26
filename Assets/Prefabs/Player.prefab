@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2137488119889159732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.444, y: -0.152, z: 0.198}
+  m_LocalPosition: {x: 0.261, y: 0.259, z: 1.964}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48,6 +48,8 @@ GameObject:
   - component: {fileID: 215315515951903598}
   - component: {fileID: 236264520692802537}
   - component: {fileID: 3381917389436523050}
+  - component: {fileID: 1259238475755278508}
+  - component: {fileID: 8569718800546380517}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -195,6 +197,7 @@ MonoBehaviour:
   rotationSpeed: 12
   moveAction: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   cameraTransform: {fileID: 0}
+  characterAnimatorController: {fileID: 1259238475755278508}
 --- !u!114 &215315515951903598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,9 +212,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterShoot
   bulletPrefab: {fileID: 4738163554463239283, guid: e8ecfddb8d420ca458d38e2ce2c6c874, type: 3}
   firePoint: {fileID: 3197124415711423639}
-  bulletSpeed: 5
+  bulletSpeed: 10
   fireAction: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   aimCamera: {fileID: 0}
+  characterAnimatorController: {fileID: 1259238475755278508}
 --- !u!114 &236264520692802537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +247,44 @@ MonoBehaviour:
   - {fileID: 215315515951903598}
   - {fileID: 2591762558033718646}
   characterRigidbody: {fileID: 3890613394332255587}
+--- !u!114 &1259238475755278508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532479338910953436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89b7e854446d894faf5e0a95cd36b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterAnimatorController
+  animator: {fileID: 8569718800546380517}
+  movingParameter: IsMoving
+  downParameter: 
+  attackParameter: Attack
+--- !u!95 &8569718800546380517
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532479338910953436}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: ccd289a16126b8144a26753ac30a90ae, type: 3}
+  m_Controller: {fileID: 9100000, guid: a6b6e954858620142a5a8432ec5e4686, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &8456465977615468647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -310,40 +352,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1777931637874642425, guid: 0b1a163415cc9c44db0fc6aa5c5541c9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6659430990995858535}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b1a163415cc9c44db0fc6aa5c5541c9, type: 3}
 --- !u!4 &7403017062394650404 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1434303894787331907, guid: 0b1a163415cc9c44db0fc6aa5c5541c9, type: 3}
   m_PrefabInstance: {fileID: 8456465977615468647}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7923833298164385182 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1777931637874642425, guid: 0b1a163415cc9c44db0fc6aa5c5541c9, type: 3}
-  m_PrefabInstance: {fileID: 8456465977615468647}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &6659430990995858535
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7923833298164385182}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: ccd289a16126b8144a26753ac30a90ae, type: 3}
-  m_Controller: {fileID: 9100000, guid: a6b6e954858620142a5a8432ec5e4686, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
