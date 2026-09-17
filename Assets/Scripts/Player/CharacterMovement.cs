@@ -16,6 +16,8 @@ public class CharacterMovement : MonoBehaviour
     private InputActionReference moveAction;
     [SerializeField, Tooltip("Reference to the Camera.")]
     private Transform cameraTransform;
+    [SerializeField, Tooltip("")]
+    private CharacterAnimatorController characterAnimatorController;
 
     private Rigidbody _rb;
     private Vector2 _inputRaw;
@@ -62,6 +64,8 @@ public class CharacterMovement : MonoBehaviour
         }
 
         _moveDirection = CameraRelativeDirection(_inputRaw);
+
+        characterAnimatorController.SetMoving(_moveDirection.sqrMagnitude > 0.01f);
     }
 
     private void FixedUpdate()

@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 4501576253519671151}
   - component: {fileID: 3296631336759575465}
   - component: {fileID: 2031989683096891667}
+  - component: {fileID: 3208499877561714440}
+  - component: {fileID: 2137090460673033746}
+  - component: {fileID: 7375531959420237111}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -111,6 +114,54 @@ MonoBehaviour:
   attackRange: 3
   attackDamage: 1
   attackCooldown: 1
+--- !u!114 &3208499877561714440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4810998831328396516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89b7e854446d894faf5e0a95cd36b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterAnimatorController
+  animator: {fileID: 5560571672416225563}
+  movingParameter: IsMoving
+  downParameter: IsDown
+  attackParameter: Attack
+--- !u!114 &2137090460673033746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4810998831328396516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f64a6fc77c857e44a39da23cc40ce03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterHealth
+  maxHealth: 1
+  invincibilityDuration: 0
+--- !u!114 &7375531959420237111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4810998831328396516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f17f1e638a371b4a88a5e6129fce518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDeath
+  destroyDelay: 2
+  characterAnimatorController: {fileID: 3208499877561714440}
+  behavioursToDisable:
+  - {fileID: 3296631336759575465}
+  - {fileID: 2031989683096891667}
+  - {fileID: 4501576253519671151}
 --- !u!1001 &8698663081120101892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168,6 +219,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d323074f1bca0f64095f1d2cc476db95, type: 3}
+--- !u!95 &5560571672416225563 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3863179757689503519, guid: d323074f1bca0f64095f1d2cc476db95, type: 3}
+  m_PrefabInstance: {fileID: 8698663081120101892}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8147028934563465034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 695758153308696910, guid: d323074f1bca0f64095f1d2cc476db95, type: 3}
