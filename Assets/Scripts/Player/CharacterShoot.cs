@@ -18,6 +18,8 @@ public class CharacterShoot : MonoBehaviour
     [Header("References")]
     [SerializeField, Tooltip("Reference to the Camera.")]
     private Camera aimCamera;
+    [SerializeField, Tooltip("")]
+    private CharacterAnimatorController characterAnimatorController;
 
     private void Awake()
     {
@@ -45,6 +47,11 @@ public class CharacterShoot : MonoBehaviour
     }
 
     private void Fire()
+    {
+        characterAnimatorController.TriggerAttack();
+    }
+
+    public void SpawnBullet()
     {
         Vector3 dir = firePoint.forward;
         dir.y = 0f;
