@@ -2056,6 +2056,10 @@ PrefabInstance:
       propertyPath: aimCamera
       value: 
       objectReference: {fileID: 1902227484}
+    - target: {fileID: 215315515951903598, guid: 267567f7e0957ec4ab1fbac9092aa7c4, type: 3}
+      propertyPath: bulletSpeed
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 2591762558033718646, guid: 267567f7e0957ec4ab1fbac9092aa7c4, type: 3}
       propertyPath: cameraTransform
       value: 
@@ -2190,6 +2194,10 @@ PrefabInstance:
     - target: {fileID: 5402399137859993111, guid: 2b71171003a960444a68ccb51ab8c343, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402399137859993111, guid: 2b71171003a960444a68ccb51ab8c343, type: 3}
+      propertyPath: m_TagString
+      value: Chest
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
