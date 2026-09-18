@@ -46,6 +46,11 @@ public class EnemyAttack : MonoBehaviour
         {
             target.TakeDamage(attackDamage);
             _nextAttackTime = Time.time + attackCooldown;
+
+            if (target.CompareTag("Chest") == true)
+            {
+                _movement.OnSteal(attackDamage);
+            }
         }
     }
 

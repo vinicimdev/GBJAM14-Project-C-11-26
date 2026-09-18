@@ -7,9 +7,12 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyMovement : MonoBehaviour
 {
-    [Header("Detection")]
-    [SerializeField, Tooltip("")]
-    private float detectionRange = 20f;
+    public enum EnemyAction
+    {
+        AttackPlayer,
+        Steal,
+        Escape,
+    }
 
     [Header("Movement")]
     [SerializeField, Tooltip("")]
@@ -17,10 +20,22 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField, Tooltip("")]
     private float updateInterval = 0.2f;
 
+    [Header("AI Behaviour")]
+    [SerializeField, Tooltip("")]
+    private float chanceToStealOnSpawn = 0.5f;
+    [SerializeField, Tooltip("")]
+    private float escapeReachedDistance = 0.5f;
+
+    public EnemyAction CurrentAction { get; private set; }
+    public bool HasStolenGold { get; private set; }
+    public int StolenAmount { get; private set; }
     public CharacterHealth CurrentTarget { get; private set; }
+    public CharacterHealth Chest => _chest;
 
     private NavMeshAgent _agent;
-    private CharacterHealth[] _potentialTargets;
+    private CharacterHealth _player;
+    private CharacterHealth _chest;
+    private Vector3 _escapePosition;
     private float _nextUpdateTime;
 
     private void Awake()
@@ -31,11 +46,29 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start()
     {
-        _potentialTargets = FindObjectsByType<CharacterHealth>(FindObjectsSortMode.None);
+        CharacterHealth[] all = FindObjectsByType<CharacterHealth>(FindObjectsSortMode.None);
 
-        if (_agent.isOnNavMesh == false)
+        foreach (CharacterHealth h in all)
         {
-            Debug.LogWarning($"[{nameof(EnemyMovement)}] '{name}' spawned outside of the NavMesh and won't walk.");
+            if (h.CompareTag("Player") == true)
+            {
+                _player = h;
+            }
+            else if (h.CompareTag("Chest") == true)
+            {
+                _chest = h;
+            }
+        }
+
+        _escapePosition = transform.position;
+
+        if (Random.value < chanceToStealOnSpawn)
+        {
+            CurrentAction = EnemyAction.Steal;
+        }
+        else
+        {
+            CurrentAction = EnemyAction.AttackPlayer;
         }
     }
 
@@ -53,64 +86,60 @@ public class EnemyMovement : MonoBehaviour
 
         _nextUpdateTime = Time.time + updateInterval;
 
-        CurrentTarget = FindClosestTarget();
+        UpdateAction();
+    }
 
-        if (CurrentTarget == null)
+    private void UpdateAction()
+    {
+        switch (CurrentAction)
         {
-            if (_agent.hasPath == true)
-            {
-                _agent.ResetPath();
-            }
+            case EnemyAction.AttackPlayer:
+                if (_player.IsDead == true)
+                {
+                    CurrentAction = EnemyAction.Steal;
+                    UpdateAction();
+                    return;
+                }
 
-            return;
-        }
+                CurrentTarget = _player;
+                _agent.SetDestination(_player.transform.position);
+                break;
 
-        float dist = Vector3.Distance(transform.position, CurrentTarget.transform.position);
+            case EnemyAction.Steal:
+                if (_chest.IsDead == true)
+                {
+                    CurrentAction = EnemyAction.Escape;
+                    UpdateAction();
+                    return;
+                }
 
-        if (dist <= detectionRange)
-        {
-            _agent.SetDestination(CurrentTarget.transform.position);
-        }
-        else if (_agent.hasPath == true)
-        {
-            _agent.ResetPath();
+                CurrentTarget = _chest;
+                _agent.SetDestination(_chest.transform.position);
+                break;
+
+            case EnemyAction.Escape:
+                CurrentTarget = null;
+                _agent.SetDestination(_escapePosition);
+
+                if (Vector3.Distance(transform.position, _escapePosition) <= escapeReachedDistance)
+                {
+                    Destroy(gameObject);
+                }
+
+                break;
         }
     }
 
-    private CharacterHealth FindClosestTarget()
+    public void OnSteal(int amount)
     {
-        CharacterHealth closest = null;
-        float closestDist = float.MaxValue;
-
-        foreach (CharacterHealth target in _potentialTargets)
-        {
-
-            if (target == null)
-            {
-                continue;
-            }
-
-            if (target.IsDead == true)
-            {
-                continue;
-            }
-
-            float dist = Vector3.Distance(transform.position, target.transform.position);
-
-            if (dist < closestDist)
-            {
-                closestDist = dist;
-                closest = target;
-            }
-        }
-
-        return closest;
+        HasStolenGold = true;
+        StolenAmount = amount;
+        CurrentAction = EnemyAction.Escape;
+        CurrentTarget = null;
     }
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, detectionRange);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, stopDistance);
     }
