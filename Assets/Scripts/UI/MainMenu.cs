@@ -8,6 +8,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject creditsWindow;
     [SerializeField] GameObject playButton;
     [SerializeField] GameObject closeCreditsButton;
+    [SerializeField] GameObject howToWindow;
+    [SerializeField] GameObject closeHowToButton;
+
 
     GameObject selected;
 
@@ -34,6 +37,18 @@ public class MainMenu : MonoBehaviour
     public void CloseCredits()
     {
         creditsWindow.SetActive(false);
+        Select(playButton);
+    }
+
+    public void OpenHowTo()
+    {
+        howToWindow.SetActive(true);
+        Select(closeHowToButton);
+    }
+
+    public void CloseHowTo()
+    {
+        howToWindow.SetActive(false);
         Select(playButton);
     }
 
