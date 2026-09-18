@@ -12,6 +12,11 @@ public class Typewriter : MonoBehaviour
     [SerializeField] float charsPerSecond = 24f;
     [SerializeField] float punctuationPause = 0.25f;
     [SerializeField, Min(1)] int blipEvery = 3;
+    [SerializeField] Vector2 blipPitch = new Vector2(0.92f, 1.08f);
+
+    [Header("Page end")]
+    [SerializeField, Tooltip("Blinks while a full page waits for a press.")] GameObject pageEndIcon;
+    [SerializeField] float blinkSeconds = 0.4f;
 
     [Header("Standalone playback")]
     [SerializeField, Tooltip("Plays displayText on its own at Start. Turn this off once a CutsceneDirector drives this typewriter.")]
@@ -44,11 +49,13 @@ public class Typewriter : MonoBehaviour
         IsPlaying = false;
         tmp.text = "";
         tmp.maxVisibleCharacters = 0;
+        ShowIcon(false);
     }
 
     IEnumerator Run(string text)
     {
         IsPlaying = true;
+        ShowIcon(false);
 
         tmp.text = text;              
         tmp.pageToDisplay = 1;
@@ -62,7 +69,7 @@ public class Typewriter : MonoBehaviour
             yield return Reveal(info.firstCharacterIndex, info.lastCharacterIndex + 1);
 
             yield return null;          // one press can't do two things
-            while (!Pressed) yield return null;
+            yield return WaitForPress();
         }
 
         IsPlaying = false;
@@ -91,13 +98,39 @@ public class Typewriter : MonoBehaviour
                 char c = tmp.textInfo.characterInfo[shown].character;
                 shown++;
 
-                if (blip != null && c != ' ' && shown % blipEvery == 0)
-                    blip.Play();
+                if (c != ' ' && shown % blipEvery == 0) Blip();
 
                 wait += ".,!?".IndexOf(c) >= 0 ? punctuationPause : 1f / charsPerSecond;
             }
 
             tmp.maxVisibleCharacters = shown;
         }
+    }
+
+    IEnumerator WaitForPress()
+    {
+        float t = 0f;
+
+        while (!Pressed)
+        {
+            t += Time.unscaledDeltaTime;
+            ShowIcon(t % (blinkSeconds * 2f) < blinkSeconds);
+            yield return null;
+        }
+
+        ShowIcon(false);
+    }
+
+    void Blip()
+    {
+        if (blip == null) return;
+
+        blip.pitch = UnityEngine.Random.Range(blipPitch.x, blipPitch.y);
+        blip.Play();
+    }
+
+    void ShowIcon(bool on)
+    {
+        if (pageEndIcon != null) pageEndIcon.SetActive(on);
     }
 }
