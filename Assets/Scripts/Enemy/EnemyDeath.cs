@@ -17,10 +17,12 @@ public class EnemyDeath : MonoBehaviour
     private Behaviour[] behavioursToDisable;
 
     private CharacterHealth _health;
+    private EnemyMovement _movement;
 
     private void Awake()
     {
         _health = GetComponent<CharacterHealth>();
+        _movement = GetComponent<EnemyMovement>();
     }
 
     private void OnEnable()
@@ -35,6 +37,11 @@ public class EnemyDeath : MonoBehaviour
 
     private void HandleDeath()
     {
+        if (_movement.HasStolenGold == true)
+        {
+            _movement.Chest.Heal(_movement.StolenAmount);
+        }
+
         StartCoroutine(DeathRoutine());
     }
 
