@@ -480,10 +480,10 @@ Canvas:
   m_GameObject: {fileID: 349304318}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_RenderMode: 1
+  m_Camera: {fileID: 187094676}
+  m_PlaneDistance: 0.5
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -980,8 +980,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293522146
-  m_fontColor: {r: 0.8862745, g: 0.9490196, b: 0.9137255, a: 1}
+    rgba: 4293521890
+  m_fontColor: {r: 0.8862746, g: 0.9450981, b: 0.91372555, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1476,8 +1476,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4293521890
+  m_fontColor: {r: 0.8862746, g: 0.9450981, b: 0.91372555, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1760,8 +1760,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293522146
-  m_fontColor: {r: 0.8862745, g: 0.9490196, b: 0.9137255, a: 1}
+    rgba: 4293521890
+  m_fontColor: {r: 0.8862746, g: 0.9450981, b: 0.91372555, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1977,7 +1977,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -17.85, y: -16}
+  m_AnchoredPosition: {x: -17.849998, y: -16}
   m_SizeDelta: {x: -35.7, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1276861575
@@ -2009,8 +2009,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293522146
-  m_fontColor: {r: 0.8862745, g: 0.9490196, b: 0.9137255, a: 1}
+    rgba: 4293521890
+  m_fontColor: {r: 0.8862746, g: 0.9450981, b: 0.91372555, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2302,7 +2302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8862745, g: 0.9490196, b: 0.9137255, a: 1}
+  m_Color: {r: 0.15294118, g: 0.37254903, b: 0.4039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2510,7 +2510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8862745, g: 0.9490196, b: 0.9137255, a: 1}
+  m_Color: {r: 0.15294118, g: 0.37254903, b: 0.4039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2569,7 +2569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -22.85, y: -16}
+  m_AnchoredPosition: {x: -22.849998, y: -16}
   m_SizeDelta: {x: -45.7, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1695854851
@@ -2601,8 +2601,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293522146
-  m_fontColor: {r: 0.8862745, g: 0.9490196, b: 0.9137255, a: 1}
+    rgba: 4293521890
+  m_fontColor: {r: 0.8862746, g: 0.9450981, b: 0.91372555, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2761,8 +2761,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4293521890
+  m_fontColor: {r: 0.8862746, g: 0.9450981, b: 0.91372555, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2904,7 +2904,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -17.85, y: -16}
+  m_AnchoredPosition: {x: -17.849998, y: -16}
   m_SizeDelta: {x: -35.7, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1779844924
@@ -2936,8 +2936,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293522146
-  m_fontColor: {r: 0.8862745, g: 0.9490196, b: 0.9137255, a: 1}
+    rgba: 4293521890
+  m_fontColor: {r: 0.8862746, g: 0.9450981, b: 0.91372555, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3208,8 +3208,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293522146
-  m_fontColor: {r: 0.8862745, g: 0.9490196, b: 0.9137255, a: 1}
+    rgba: 4293521890
+  m_fontColor: {r: 0.8862746, g: 0.9450981, b: 0.91372555, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3387,7 +3387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8862745, g: 0.9490196, b: 0.9137255, a: 1}
+  m_Color: {r: 0.15294118, g: 0.37254903, b: 0.4039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
