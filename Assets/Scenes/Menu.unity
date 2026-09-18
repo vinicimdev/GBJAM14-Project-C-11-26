@@ -204,7 +204,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4792132072763575847, guid: 4ea7b5bf10f92644faa98c2c67e567d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.8
+      value: 9.8
       objectReference: {fileID: 0}
     - target: {fileID: 4792132072763575847, guid: 4ea7b5bf10f92644faa98c2c67e567d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -212,23 +212,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4792132072763575847, guid: 4ea7b5bf10f92644faa98c2c67e567d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4792132072763575847, guid: 4ea7b5bf10f92644faa98c2c67e567d1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.18702786
+      value: 0.02851483
       objectReference: {fileID: 0}
     - target: {fileID: 4792132072763575847, guid: 4ea7b5bf10f92644faa98c2c67e567d1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.18702799
+      value: -0.028514935
       objectReference: {fileID: 0}
     - target: {fileID: 4792132072763575847, guid: 4ea7b5bf10f92644faa98c2c67e567d1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6819243
+      value: -0.70653176
       objectReference: {fileID: 0}
     - target: {fileID: 4792132072763575847, guid: 4ea7b5bf10f92644faa98c2c67e567d1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.68192405
+      value: -0.70653147
       objectReference: {fileID: 0}
     - target: {fileID: 4792132072763575847, guid: 4ea7b5bf10f92644faa98c2c67e567d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -240,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4792132072763575847, guid: 4ea7b5bf10f92644faa98c2c67e567d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -149.326
+      value: -175.378
       objectReference: {fileID: 0}
     - target: {fileID: 5317275711476864157, guid: 4ea7b5bf10f92644faa98c2c67e567d1, type: 3}
       propertyPath: m_Name
@@ -533,6 +533,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
   cutsceneScene: Cutscene
   creditsWindow: {fileID: 769130665}
+  playButton: {fileID: 1665494440}
+  closeCreditsButton: {fileID: 1797172233}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,8 +1676,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -44.5, y: -26.9}
-  m_SizeDelta: {x: 60, y: 15}
+  m_AnchoredPosition: {x: -41.8, y: -21.9}
+  m_SizeDelta: {x: 70, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1665494442
 MonoBehaviour:
@@ -1698,11 +1700,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.8862745, g: 0.9490196, b: 0.9137255, a: 1}
+    m_HighlightedColor: {r: 0.15294118, g: 0.37254903, b: 0.40784314, a: 1}
+    m_PressedColor: {r: 0.02745098, g: 0.07450981, b: 0.11764706, a: 1}
+    m_SelectedColor: {r: 0.15294118, g: 0.37254903, b: 0.40784314, a: 1}
+    m_DisabledColor: {r: 0.02745098, g: 0.07450981, b: 0.11764706, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1746,7 +1748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.8862745, g: 0.9490196, b: 0.9137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2377,7 +2379,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -27.2, y: -52.099964}
-  m_SizeDelta: {x: 100, y: 15}
+  m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2023453221
 MonoBehaviour:
@@ -2400,11 +2402,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.8862745, g: 0.9490196, b: 0.9137255, a: 1}
+    m_HighlightedColor: {r: 0.15294118, g: 0.37254903, b: 0.40784314, a: 1}
+    m_PressedColor: {r: 0.02745098, g: 0.07450981, b: 0.11764706, a: 1}
+    m_SelectedColor: {r: 0.15294118, g: 0.37254903, b: 0.40784314, a: 1}
+    m_DisabledColor: {r: 0.02745098, g: 0.07450981, b: 0.11764706, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2448,7 +2450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.8862745, g: 0.9490196, b: 0.9137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
