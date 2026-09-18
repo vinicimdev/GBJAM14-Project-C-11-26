@@ -2346,50 +2346,102 @@ MonoBehaviour:
     state: 
     leadIn: 1
     holdOut: 1
-    text: 'FINALLY GOT TO SKULL ISLAND MUAHAHAHAHAH WHERE THE TREASURE FROM THE PIRATE
-      PRINCE RESIDES          OwO
+    text: 'FINALLY! SKULL ISLAND
 
-      SOME SAY ITS DOOMED AND CURSED BUT ME DONT
-      CARE
+      MUAHAHAHAHAHAHAH >:3
 
-      ME GONNA BE RICH HIHIHIIHIH >:3 '
+      HERE IS WHERE
+      THE
+
+      PIRATE PRINCE PUT
+
+      ALL HIS TREASURE
+
+      TEN YEARS ME SAIL
+
+      FOR
+      THIS ROCK, BOYS!
+
+      ...ME HAS NO BOYS.
+
+      TALKING ALONE AGAIN
+
+      ME
+      DO THAT A LOT OwO
+
+      THEY SAY IT IS DOOMED
+
+      THEY SAY IT IS CURSED
+
+      ME?
+      ME DONT CARE.
+
+      ME ONLY CARE ABOUT
+
+      ONE THING. GOLD! >:3
+
+'
   - label: Shot2
     shotCamera: {fileID: 1624093412}
     rig: {fileID: 0}
     state: 
     leadIn: 1
     holdOut: 1
-    text: "IM RICH IM RICH IM RICH\nNO MAN COULD TEST ME, IMPRESS ME, MY CASH FLOW
-      WILL NEVER EVER END,      \nCAUSE IM GONNA HAVE ALL THE MONEY IN THE WORLD,
-      IF I AM A WEALTHY BOY\nUwU"
+    text: "THE CAVE IS VERY DARK\nAND VERY COLD.\n...ME IS NOT SCARED.\nME WILL SING!
+      SINGING\nIS NOT SCARED! :3 \nRICH! RICH! RICH!\nOH ME! OH MY! SO RICH\nNO MAN
+      CAN TEST ME\nNO SEA CAN IMPRESS ME\nME RIVER OF GOLD\nWILL NEVER EVER END!\nALL
+      THE MONEY IN THE\nWORLD IS FOR ME\nBECAUSE ME IS A VERY\nWEALTHY BOY! UwU\n"
   - label: Shot3
     shotCamera: {fileID: 1643552105}
     rig: {fileID: 0}
     state: 
     leadIn: 1
     holdOut: 1
-    text: 'I GOT I GOT
+    text: 'THERE IT IS. OwO
 
-      BEAUTY KING ON SILVER SCREEN, LIVING LIFE LIKE A DREAM,
-      I KNOW IVE GOT A BIG EGO,
+      ALL MINE. ALL MINE.
 
-      BUT I REALLY DONT KNOW WHY ITS SUCH A BIG
-      DEAL THOUGH?'
+      ME GOT IT! ME GOT IT!
+
+      TEN
+      YEARS AND ME
+
+      GOT IT! HIHIHIIHIH
+
+      ME IS THE BEAUTY KING
+
+      OF
+      THE SILVER SEA!
+
+      ME LIVE LIFE LIKE A
+
+      DREAM! ME KNOW ME
+
+      GOT
+      A BIG EGO... :3
+
+      BUT WHY IS THAT SUCH
+
+      A BIG DEAL THOUGH? :3
+
+      LOOK
+      AT ME. LOOK AT
+
+      THE CHEST. JUST US.
+
+      ...WHY IS IT WARM?'
   - label: Shot4
     shotCamera: {fileID: 232467441}
     rig: {fileID: 0}
     state: 
     leadIn: 1
     holdOut: 1
-    text: 'THEY CAN BEG AND THEY CAN PLEAD, BUT THEY CANT SEE THE LIGHT, THATS RIGHT,
-      CAUSE THE BOY WITH THE COLD HARD CASH IS ALWAYS MISTER RIGHT!!! :3
-
-
-
-
-
-      OH
-      NO, WHAT IS THAT SOUND OH NO OH NOOOOOOOOO'
+    text: "ON THE SHIP IT GOES!\nTIE IT DOWN, BOYS!\nYES, CAPTAIN! \n...THAT WAS
+      ME AGAIN \nWASNT IT. >:3 \nTHEY CAN BEG AND\nTHEY CAN PLEAD BUT\nTHEY CANT
+      SEE THE\nLIGHT, THATS RIGHT!\nTHE BOY WITH THE COLD\nHARD CASH IS ALWAYS\nMISTER
+      RIGHT!!! :3\nME AND ME CHEST,\nGOING HOME VERY RICH\nNOTHING CAN STOP...\n...WHAT
+      IS THAT\nSOUND? OwO\nTHAT IS NOT THE WIND\nTHAT IS NOT THE SEA\r\nOH NO. OH
+      NO. NOOOO!"
   typewriter: {fileID: 571241707}
   textbox: {fileID: 1085418618}
   nextScene: Level
@@ -6558,6 +6610,7 @@ MonoBehaviour:
   bulletSpeed: 5
   fireAction: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   aimCamera: {fileID: 0}
+  characterAnimatorController: {fileID: 0}
 --- !u!114 &1140322672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6574,6 +6627,7 @@ MonoBehaviour:
   rotationSpeed: 12
   moveAction: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   cameraTransform: {fileID: 0}
+  characterAnimatorController: {fileID: 0}
 --- !u!54 &1140322673
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11116,6 +11170,7 @@ MonoBehaviour:
   bulletSpeed: 5
   fireAction: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   aimCamera: {fileID: 0}
+  characterAnimatorController: {fileID: 0}
 --- !u!114 &2098178753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11132,6 +11187,7 @@ MonoBehaviour:
   rotationSpeed: 12
   moveAction: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   cameraTransform: {fileID: 0}
+  characterAnimatorController: {fileID: 0}
 --- !u!54 &2098178754
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11500,6 +11556,7 @@ MonoBehaviour:
   bulletSpeed: 5
   fireAction: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   aimCamera: {fileID: 0}
+  characterAnimatorController: {fileID: 0}
 --- !u!114 &236264519069061425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11720,6 +11777,7 @@ MonoBehaviour:
   rotationSpeed: 12
   moveAction: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   cameraTransform: {fileID: 0}
+  characterAnimatorController: {fileID: 0}
 --- !u!1 &2781359332795029033
 GameObject:
   m_ObjectHideFlags: 0
