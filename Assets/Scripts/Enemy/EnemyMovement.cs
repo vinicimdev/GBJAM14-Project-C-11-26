@@ -26,6 +26,10 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField, Tooltip("")]
     private float escapeReachedDistance = 0.5f;
 
+    [Header("Score")]
+    [SerializeField, Tooltip("")]
+    private int scoreLostOnEscape = 5;
+
     public EnemyAction CurrentAction { get; private set; }
     public bool HasStolenGold { get; private set; }
     public int StolenAmount { get; private set; }
@@ -123,6 +127,11 @@ public class EnemyMovement : MonoBehaviour
 
                 if (Vector3.Distance(transform.position, _escapePosition) <= escapeReachedDistance)
                 {
+                    if (HasStolenGold == true)
+                    {
+                        ScoreManager.Instance.RemoveScore(scoreLostOnEscape);
+                    }
+                    
                     Destroy(gameObject);
                 }
 

@@ -100,4 +100,14 @@ public class EnemySpawner : MonoBehaviour
             Gizmos.DrawLine(p.position, p.position + Vector3.up * 2f);
         }
     }
+
+    public void SetMaxAlive(int value)
+    {
+        maxAlive = value;
+    }
+
+    public void SetSpawnInterval(float value)
+    {
+        spawnInterval = value;
+    }
 }

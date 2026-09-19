@@ -16,6 +16,10 @@ public class EnemyDeath : MonoBehaviour
     [SerializeField, Tooltip("")]
     private Behaviour[] behavioursToDisable;
 
+    [Header("Score")]
+    [SerializeField, Tooltip("")]
+    private int scoreOnKill = 10;
+
     private CharacterHealth _health;
     private EnemyMovement _movement;
 
@@ -37,6 +41,8 @@ public class EnemyDeath : MonoBehaviour
 
     private void HandleDeath()
     {
+        ScoreManager.Instance.AddScore(scoreOnKill);
+
         if (_movement.HasStolenGold == true)
         {
             _movement.Chest.Heal(_movement.StolenAmount);
