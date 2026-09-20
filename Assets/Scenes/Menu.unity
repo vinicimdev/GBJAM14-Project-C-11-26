@@ -247,7 +247,8 @@ PrefabInstance:
       value: PirateShip
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 585916065979553171, guid: 4ea7b5bf10f92644faa98c2c67e567d1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5317275711476864157, guid: 4ea7b5bf10f92644faa98c2c67e567d1, type: 3}
