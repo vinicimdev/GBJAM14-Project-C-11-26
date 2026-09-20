@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 221d217bb0a1d83f684b541d36145899, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 2f50e34108abc1f4aadcec6fbf2bd5dd, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1612,7 +1612,7 @@ MonoBehaviour:
     E - Interact 
     / advance text / confirm
 
-    
+
 
     Gamepad
 

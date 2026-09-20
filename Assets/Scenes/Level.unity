@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 221d217bb0a1d83f684b541d36145899, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: f3ccff4aa5fbb304788a638db7c31d19, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -696,6 +696,10 @@ MonoBehaviour:
   charsPerSecond: 24
   punctuationPause: 0.25
   blipEvery: 3
+  blipPitch: {x: 0.92, y: 1.08}
+  pageEndIcon: {fileID: 0}
+  blinkSeconds: 0.4
+  playOnStart: 1
   displayText: "SALVE O CORINTHIANS O CAMPE\xC3O DOS CAMPE\xD5ES ETERNAMENTE DENTRO
     DOS NOSSOS CORA\xC7\xD5ES SALVE O CORINTHIANS DE TRADI\xC7\xD5ES E GL\xD3RIAS
     MIL TU \xC9S ORGULHO DOS DESPORTISTAS DO BRASIL TEU PASSADO \xC9 UMA BANDEIRA
