@@ -3769,7 +3769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Typewriter
   tmp: {fileID: 571241708}
-  submit: {fileID: 392368643174621059, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  submit: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   blip: {fileID: 1955553377}
   charsPerSecond: 25
   punctuationPause: 0.25
