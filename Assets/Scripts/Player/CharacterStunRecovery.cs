@@ -15,10 +15,12 @@ public class CharacterStunRecovery : MonoBehaviour
     [Header("Physics")]
     [SerializeField, Tooltip("")]
     private Rigidbody characterRigidbody;
+    [SerializeField, Tooltip("")]
+    private CharacterAnimatorController characterAnimatorController;
 
     private CharacterHealth _health;
     private Coroutine _stunRoutine;
-
+    private RigidbodyConstraints _originalConstraints;
     private void Awake()
     {
         _health = GetComponent<CharacterHealth>();
@@ -54,6 +56,8 @@ public class CharacterStunRecovery : MonoBehaviour
 
         characterRigidbody.linearVelocity = Vector3.zero;
         characterRigidbody.angularVelocity = Vector3.zero;
+        _originalConstraints = characterRigidbody.constraints;
+        characterRigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
     }
 
     private IEnumerator StunRoutine()
@@ -62,10 +66,17 @@ public class CharacterStunRecovery : MonoBehaviour
 
         StopMovement();
 
+        characterAnimatorController.SetDown(true);
+
         yield return new WaitForSeconds(stunDuration);
 
         _health.Heal(_health.MaxHealth);
+
+        characterRigidbody.constraints = _originalConstraints;
+
         SetBehavioursEnabled(true);
+
+        characterAnimatorController.SetDown(false);
 
         _stunRoutine = null;
     }
