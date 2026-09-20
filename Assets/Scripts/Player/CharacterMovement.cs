@@ -1,15 +1,18 @@
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
 /// <summary>
 /// Isometric movement script.
 /// </summary>
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(NavMeshAgent))]
 public class CharacterMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
-    [SerializeField, Tooltip("Base move speed of the character.")] private float moveSpeed = 5f;
-    [SerializeField, Tooltip("Base rotation speed of the character.")] private float rotationSpeed = 12f;
+    [SerializeField, Tooltip("Base move speed of the character.")] 
+    private float moveSpeed = 5f;
+    [SerializeField, Tooltip("Base rotation speed of the character.")]
+    private float rotationSpeed = 12f;
 
     [Header("References")]
     [SerializeField, Tooltip("Reference to the Input Action, not the whole Input Action Map.")] 
@@ -19,16 +22,15 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField, Tooltip("")]
     private CharacterAnimatorController characterAnimatorController;
 
-    private Rigidbody _rb;
+    private NavMeshAgent _agent;
     private Vector2 _inputRaw;
     private Vector3 _moveDirection;
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody>();
+        _agent = GetComponent<NavMeshAgent>();
 
-        _rb.freezeRotation = true;
-        _rb.interpolation = RigidbodyInterpolation.Interpolate;
+        _agent.updateRotation = false;
 
         if (cameraTransform == null && Camera.main != null)
         {
@@ -50,6 +52,11 @@ public class CharacterMovement : MonoBehaviour
         {
             moveAction.action.Disable();
         }
+
+        if (_agent.isOnNavMesh == true)
+        {
+            _agent.velocity = Vector3.zero;
+        }
     }
 
     private void Update()
@@ -69,19 +76,13 @@ public class CharacterMovement : MonoBehaviour
         {
             characterAnimatorController.SetMoving(_moveDirection.sqrMagnitude > 0.01f);
         }
-    }
 
-    private void FixedUpdate()
-    {
-        Vector3 velocity = _moveDirection * moveSpeed;
-        velocity.y = _rb.linearVelocity.y;
-        _rb.linearVelocity = velocity;
+        _agent.Move(_moveDirection * moveSpeed * Time.deltaTime);
 
         if (_moveDirection.sqrMagnitude > 0.001f)
         {
-            Quaternion targRotation = Quaternion.LookRotation(_moveDirection, Vector3.up);
-
-            _rb.MoveRotation(Quaternion.Slerp(_rb.rotation, targRotation, rotationSpeed * Time.fixedDeltaTime));
+            Quaternion targRot = Quaternion.LookRotation(_moveDirection, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targRot, rotationSpeed * Time.deltaTime);
         }
     }
 
