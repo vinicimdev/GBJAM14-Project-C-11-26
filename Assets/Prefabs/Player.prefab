@@ -179,7 +179,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &2591762558033718646
 MonoBehaviour:
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterShoot
   bulletPrefab: {fileID: 4738163554463239283, guid: e8ecfddb8d420ca458d38e2ce2c6c874, type: 3}
   firePoint: {fileID: 3197124415711423639}
-  bulletSpeed: 10
+  bulletSpeed: 40
   fireAction: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   aimCamera: {fileID: 0}
   characterAnimatorController: {fileID: 1259238475755278508}
@@ -247,6 +247,7 @@ MonoBehaviour:
   - {fileID: 215315515951903598}
   - {fileID: 2591762558033718646}
   characterRigidbody: {fileID: 3890613394332255587}
+  characterAnimatorController: {fileID: 1259238475755278508}
 --- !u!114 &1259238475755278508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterAnimatorController
   animator: {fileID: 8569718800546380517}
   movingParameter: IsMoving
-  downParameter: 
+  downParameter: IsDown
   attackParameter: Attack
 --- !u!95 &8569718800546380517
 Animator:
