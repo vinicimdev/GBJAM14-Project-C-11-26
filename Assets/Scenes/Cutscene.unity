@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 221d217bb0a1d83f684b541d36145899, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: f89c965ebc7a1574eb07cd0695c4b0bc, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -3769,7 +3769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Typewriter
   tmp: {fileID: 571241708}
-  submit: {fileID: 392368643174621059, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  submit: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   blip: {fileID: 1955553377}
   charsPerSecond: 25
   punctuationPause: 0.25
@@ -6585,6 +6585,7 @@ MonoBehaviour:
   - {fileID: 1140322671}
   - {fileID: 1140322672}
   characterRigidbody: {fileID: 1140322673}
+  characterAnimatorController: {fileID: 0}
 --- !u!114 &1140322670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11268,6 +11269,7 @@ MonoBehaviour:
   - {fileID: 2098178752}
   - {fileID: 2098178753}
   characterRigidbody: {fileID: 2098178754}
+  characterAnimatorController: {fileID: 0}
 --- !u!114 &2098178751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12041,6 +12043,7 @@ MonoBehaviour:
   - {fileID: 215315516477047222}
   - {fileID: 2591762559632547758}
   characterRigidbody: {fileID: 3890613393790531515}
+  characterAnimatorController: {fileID: 0}
 --- !u!1 &3532479339461238020
 GameObject:
   m_ObjectHideFlags: 0
