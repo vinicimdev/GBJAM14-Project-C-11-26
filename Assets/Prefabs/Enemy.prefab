@@ -96,9 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8265ab1a5e2506445a82b4cac3f12023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
-  detectionRange: 200
   stopDistance: 2
   updateInterval: 0.2
+  chanceToStealOnSpawn: 0.5
+  escapeReachedDistance: 0.1
+  scoreLostOnEscape: 5
 --- !u!114 &2031989683096891667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +164,7 @@ MonoBehaviour:
   - {fileID: 3296631336759575465}
   - {fileID: 2031989683096891667}
   - {fileID: 4501576253519671151}
+  scoreOnKill: 10
 --- !u!1001 &8698663081120101892
 PrefabInstance:
   m_ObjectHideFlags: 0

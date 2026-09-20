@@ -23,8 +23,6 @@ public class EnemyMovement : MonoBehaviour
     [Header("AI Behaviour")]
     [SerializeField, Tooltip("")]
     private float chanceToStealOnSpawn = 0.5f;
-    [SerializeField, Tooltip("")]
-    private float escapeReachedDistance = 0.5f;
 
     [Header("Score")]
     [SerializeField, Tooltip("")]
@@ -41,6 +39,7 @@ public class EnemyMovement : MonoBehaviour
     private CharacterHealth _chest;
     private Vector3 _escapePosition;
     private float _nextUpdateTime;
+    private bool _hasSetEscapeDestination;
 
     private void Awake()
     {
@@ -123,9 +122,14 @@ public class EnemyMovement : MonoBehaviour
 
             case EnemyAction.Escape:
                 CurrentTarget = null;
-                _agent.SetDestination(_escapePosition);
 
-                if (Vector3.Distance(transform.position, _escapePosition) <= escapeReachedDistance)
+                if (_hasSetEscapeDestination == false)
+                {
+                    _agent.SetDestination(_escapePosition);
+                    _hasSetEscapeDestination = true;
+                }
+
+                if (_agent.pathPending == false && _agent.remainingDistance <= _agent.stoppingDistance)
                 {
                     if (HasStolenGold == true)
                     {
