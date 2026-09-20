@@ -408,7 +408,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: b459f86873d1f4343b296b414d4ba9b5, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 4d0c5562015260343aa84b6f16ef64b8, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &2618173919781817238
 GameObject:
@@ -1053,6 +1053,7 @@ GameObject:
   - component: {fileID: 5090539544350435789}
   - component: {fileID: 1384443290574742654}
   - component: {fileID: 2125365073303030373}
+  - component: {fileID: 221732901734084138}
   m_Layer: 6
   m_Name: Ship
   m_TagString: Player
@@ -1068,7 +1069,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6846900479753604833}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9238794, z: -0, w: 0.3826838}
+  m_LocalRotation: {x: 0, y: 0.92387956, z: 0, w: 0.38268343}
   m_LocalPosition: {x: -0.10343764, y: 3.3, z: 0.24971151}
   m_LocalScale: {x: 1.7513, y: 1.7513, z: 1.7513}
   m_ConstrainProportionsScale: 0
@@ -1126,6 +1127,7 @@ MonoBehaviour:
   rotationSpeed: 0.5
   moveAction: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   cameraTransform: {fileID: 0}
+  characterAnimatorController: {fileID: 0}
 --- !u!65 &2125365073303030373
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1147,6 +1149,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 13.046621, y: 1, z: 50.10232}
   m_Center: {x: 0.3319347, y: 0, z: 0.083524704}
+--- !u!114 &221732901734084138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846900479753604833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifier
+  m_SerializedVersion: 0
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &7000326931579176103
 GameObject:
   m_ObjectHideFlags: 0
