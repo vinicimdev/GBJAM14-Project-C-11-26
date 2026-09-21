@@ -21,6 +21,12 @@ public class CharacterShoot : MonoBehaviour
     [SerializeField, Tooltip("")]
     private CharacterAnimatorController characterAnimatorController;
 
+    [Header("Audio References")]
+    [SerializeField, Tooltip("")]
+    private AudioSource shootAudioSource;
+    [SerializeField, Tooltip("")]
+    private AudioClip shootAudioClip;
+
     private void Awake()
     {
         if (aimCamera == null && Camera.main != null)
@@ -49,6 +55,7 @@ public class CharacterShoot : MonoBehaviour
     private void Fire()
     {
         characterAnimatorController.TriggerAttack();
+        shootAudioSource.PlayOneShot(shootAudioClip);
     }
 
     public void SpawnBullet()

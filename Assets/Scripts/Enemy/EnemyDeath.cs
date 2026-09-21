@@ -20,6 +20,12 @@ public class EnemyDeath : MonoBehaviour
     [SerializeField, Tooltip("")]
     private int scoreOnKill = 10;
 
+    [Header("Audio References")]
+    [SerializeField, Tooltip("")]
+    private AudioSource onDeathAudioSource;
+    [SerializeField, Tooltip("")]
+    private AudioClip onDeathAudioClip;
+
     private CharacterHealth _health;
     private EnemyMovement _movement;
     private CharacterAnimatorController _animatorController;
@@ -60,6 +66,8 @@ public class EnemyDeath : MonoBehaviour
         _animatorController.SetDown(true);
 
         characterAnimatorController.SetDown(true);
+
+        onDeathAudioSource.PlayOneShot(onDeathAudioClip);
 
         yield return new WaitForSeconds(destroyDelay);
 

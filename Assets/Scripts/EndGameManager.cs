@@ -19,7 +19,7 @@ public class EndGameManager : MonoBehaviour
 
     [Header("Scenes")]
     [SerializeField, Tooltip("")]
-    private string menuSceneName = "MainMenu";
+    private string menuSceneName = "Menu";
 
     private void Awake()
     {
