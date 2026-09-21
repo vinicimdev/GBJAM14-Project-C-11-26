@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 [RequireComponent (typeof(CharacterHealth))]
 public class CharacterStunRecovery : MonoBehaviour
@@ -14,17 +15,16 @@ public class CharacterStunRecovery : MonoBehaviour
 
     [Header("Physics")]
     [SerializeField, Tooltip("")]
-    private Rigidbody characterRigidbody;
-    [SerializeField, Tooltip("")]
     private CharacterAnimatorController characterAnimatorController;
 
     private CharacterHealth _health;
+    private CharacterMovement _movement;
     private Coroutine _stunRoutine;
-    private RigidbodyConstraints _originalConstraints;
+
     private void Awake()
     {
         _health = GetComponent<CharacterHealth>();
-        characterRigidbody = GetComponent<Rigidbody>();
+        _movement = GetComponent<CharacterMovement>();
     }
 
     private void OnEnable()
@@ -47,24 +47,11 @@ public class CharacterStunRecovery : MonoBehaviour
         _stunRoutine = StartCoroutine(StunRoutine());
     }
 
-    private void StopMovement()
-    {
-        if (characterRigidbody == null)
-        {
-            return;
-        }
-
-        characterRigidbody.linearVelocity = Vector3.zero;
-        characterRigidbody.angularVelocity = Vector3.zero;
-        _originalConstraints = characterRigidbody.constraints;
-        characterRigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-    }
-
     private IEnumerator StunRoutine()
     {
         SetBehavioursEnabled(false);
 
-        StopMovement();
+        _movement.SetPlayerAgentStopped(true);
 
         characterAnimatorController.SetDown(true);
 
@@ -72,9 +59,9 @@ public class CharacterStunRecovery : MonoBehaviour
 
         _health.Heal(_health.MaxHealth);
 
-        characterRigidbody.constraints = _originalConstraints;
-
         SetBehavioursEnabled(true);
+
+        _movement.SetPlayerAgentStopped(false);
 
         characterAnimatorController.SetDown(false);
 

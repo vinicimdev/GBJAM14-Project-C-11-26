@@ -22,11 +22,13 @@ public class EnemyDeath : MonoBehaviour
 
     private CharacterHealth _health;
     private EnemyMovement _movement;
+    private CharacterAnimatorController _animatorController;
 
     private void Awake()
     {
         _health = GetComponent<CharacterHealth>();
         _movement = GetComponent<EnemyMovement>();
+        _animatorController = GetComponent<CharacterAnimatorController>();
     }
 
     private void OnEnable()
@@ -54,6 +56,8 @@ public class EnemyDeath : MonoBehaviour
     private IEnumerator DeathRoutine()
     {
         SetBehavioursEnabled(false);
+
+        _animatorController.SetDown(true);
 
         characterAnimatorController.SetDown(true);
 
