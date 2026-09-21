@@ -55,7 +55,6 @@ public class CharacterShoot : MonoBehaviour
     private void Fire()
     {
         characterAnimatorController.TriggerAttack();
-        shootAudioSource.PlayOneShot(shootAudioClip);
     }
 
     public void SpawnBullet()
@@ -72,5 +71,7 @@ public class CharacterShoot : MonoBehaviour
 
         Bullet bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.LookRotation(dir));
         bullet.Shoot(dir, bulletSpeed);
+
+        shootAudioSource.PlayOneShot(shootAudioClip);
     }
 }
