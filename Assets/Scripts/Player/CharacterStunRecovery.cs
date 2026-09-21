@@ -17,6 +17,12 @@ public class CharacterStunRecovery : MonoBehaviour
     [SerializeField, Tooltip("")]
     private CharacterAnimatorController characterAnimatorController;
 
+    [Header("Audio References")]
+    [SerializeField, Tooltip("")]
+    private AudioSource onStunAudioSource;
+    [SerializeField, Tooltip("")]
+    private AudioClip onStunAudioClip;
+
     private CharacterHealth _health;
     private CharacterMovement _movement;
     private Coroutine _stunRoutine;
@@ -54,6 +60,8 @@ public class CharacterStunRecovery : MonoBehaviour
         _movement.SetPlayerAgentStopped(true);
 
         characterAnimatorController.SetDown(true);
+
+        onStunAudioSource.PlayOneShot(onStunAudioClip);
 
         yield return new WaitForSeconds(stunDuration);
 

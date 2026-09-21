@@ -14,6 +14,12 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField, Tooltip("")]
     private float invincibilityDuration = 0.8f;
 
+    [Header("Audio References")]
+    [SerializeField, Tooltip("")]
+    private AudioSource onDamageAudioSource;
+    [SerializeField, Tooltip("")]
+    private AudioClip onDamageAudioClip;
+
     public int CurrentHealth { get; private set; }
     public int MaxHealth => maxHealth;
     public bool IsDead => CurrentHealth <= 0;
@@ -44,6 +50,8 @@ public class CharacterHealth : MonoBehaviour
         _invincibleUntil = Time.time + invincibilityDuration;
 
         OnHealthChanged?.Invoke(CurrentHealth);
+
+        onDamageAudioSource.PlayOneShot(onDamageAudioClip);
 
         if (CurrentHealth <= 0)
         {
