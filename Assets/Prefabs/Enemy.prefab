@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   stopDistance: 1.5
   updateInterval: 0.2
-  chanceToStealOnSpawn: 0.5
+  chanceToStealOnSpawn: 0.65
   scoreLostOnEscape: 5
 --- !u!114 &2031989683096891667
 MonoBehaviour:
