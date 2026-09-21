@@ -14,11 +14,13 @@ public class EnemyAttack : MonoBehaviour
     private float attackCooldown = 1f;
 
     private EnemyMovement _movement;
+    private CharacterAnimatorController _animatorController;
     private float _nextAttackTime;
 
     private void Awake()
     {
         _movement = GetComponent<EnemyMovement>();
+        _animatorController = GetComponent<CharacterAnimatorController>();
     }
 
     private void Update()
@@ -27,25 +29,34 @@ public class EnemyAttack : MonoBehaviour
 
         if (target == null)
         {
+            _movement.SetAgentStopped(false);
             return;
         }
 
         if (target.IsDead == true)
         {
+            _movement.SetAgentStopped(false);
             return;
         }
+
+        Vector3 toTarg = target.transform.position - transform.position;
+        toTarg.y = 0f;
+        float dist = toTarg.magnitude;
+        bool inRange = dist <= attackRange;
+
+        _movement.SetAgentStopped(inRange);
 
         if (Time.time < _nextAttackTime)
         {
             return;
         }
 
-        float dist = Vector3.Distance(transform.position, target.transform.position);
-
-        if (dist <= attackRange)
+        if (inRange == true)
         {
             target.TakeDamage(attackDamage);
             _nextAttackTime = Time.time + attackCooldown;
+
+            _animatorController.TriggerAttack();
 
             if (target.CompareTag("Chest") == true)
             {

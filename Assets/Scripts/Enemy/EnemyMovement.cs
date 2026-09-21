@@ -35,6 +35,7 @@ public class EnemyMovement : MonoBehaviour
     public CharacterHealth Chest => _chest;
 
     private NavMeshAgent _agent;
+    private CharacterAnimatorController _animatorController;
     private CharacterHealth _player;
     private CharacterHealth _chest;
     private Vector3 _escapePosition;
@@ -45,6 +46,8 @@ public class EnemyMovement : MonoBehaviour
     {
         _agent = GetComponent<NavMeshAgent>();
         _agent.stoppingDistance = stopDistance;
+
+        _animatorController = GetComponent<CharacterAnimatorController>();
     }
 
     private void Start()
@@ -88,6 +91,11 @@ public class EnemyMovement : MonoBehaviour
         }
 
         _nextUpdateTime = Time.time + updateInterval;
+
+        if (_agent.isStopped == false)
+        {
+            _animatorController.SetMoving(true);
+        }
 
         UpdateAction();
     }
@@ -149,6 +157,11 @@ public class EnemyMovement : MonoBehaviour
         StolenAmount = amount;
         CurrentAction = EnemyAction.Escape;
         CurrentTarget = null;
+    }
+
+    public void SetAgentStopped(bool stopped)
+    {
+        _agent.isStopped = stopped;
     }
 
     private void OnDrawGizmosSelected()
