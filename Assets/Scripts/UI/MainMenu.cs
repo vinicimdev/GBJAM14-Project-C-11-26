@@ -11,6 +11,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject closeCreditsButton;
     [SerializeField] GameObject howToWindow;
     [SerializeField] GameObject closeHowToButton;
+    [SerializeField] GameObject menuButtons;
+    [SerializeField] GameObject settingsButton;
+    [SerializeField] SettingsWindow settings;
 
     [SerializeField] AudioSource sfx;
     [SerializeField] AudioClip moveClip;
@@ -63,6 +66,22 @@ public class MainMenu : MonoBehaviour
         Blip(clickClip);
         howToWindow.SetActive(false);
         Select(playButton);
+    }
+
+    public void OpenSettings()
+    {
+        Blip(clickClip);
+        menuButtons.SetActive(false);
+        settings.Show();
+        Select(settings.FirstRow);
+    }
+
+    public void CloseSettings()
+    {
+        Blip(clickClip);
+        settings.Hide();
+        menuButtons.SetActive(true);
+        Select(settingsButton);
     }
 
     IEnumerator PlayRoutine()

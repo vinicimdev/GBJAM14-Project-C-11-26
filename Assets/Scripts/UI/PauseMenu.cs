@@ -14,6 +14,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject closeCreditsButton;
     [SerializeField] GameObject howToWindow;
     [SerializeField] GameObject closeHowToButton;
+    [SerializeField] GameObject settingsButton;
+    [SerializeField] SettingsWindow settings;
 
     [SerializeField] AudioSource sfx;
     [SerializeField] AudioClip moveClip;
@@ -66,6 +68,7 @@ public class PauseMenu : MonoBehaviour
         pauseWindow.SetActive(isPaused);
         creditsWindow.SetActive(false);
         howToWindow.SetActive(false);
+        if (settings != null) settings.Hide();
 
         if (isPaused) Select(resumeButton);
         else EventSystem.current.SetSelectedGameObject(null);
@@ -99,6 +102,22 @@ public class PauseMenu : MonoBehaviour
         Blip(clickClip);
         howToWindow.SetActive(false);
         Select(resumeButton);
+    }
+
+    public void OpenSettings()
+    {
+        Blip(clickClip);
+        pauseWindow.SetActive(false);
+        settings.Show();
+        Select(settings.FirstRow);
+    }
+
+    public void CloseSettings()
+    {
+        Blip(clickClip);
+        settings.Hide();
+        pauseWindow.SetActive(true);
+        Select(settingsButton);
     }
 
     IEnumerator ToMenuRoutine()
