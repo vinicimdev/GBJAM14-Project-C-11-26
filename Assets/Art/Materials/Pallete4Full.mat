@@ -25,17 +25,17 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _BlackPoint: 0.1528
+    - _BlackPoint: 0.15
     - _Blend: 1
-    - _Cutoff0: 0.1667
-    - _Cutoff1: 0.5
-    - _Cutoff2: 0.8333
+    - _Cutoff0: 0.25
+    - _Cutoff1: 0.55
+    - _Cutoff2: 0.67
     - _DebugView: 0
     - _DitherScale: 1
     - _Gamma: 1
     - _Pattern: 0
-    - _TransitionWidth: 0.5
-    - _WhitePoint: 0.8472
+    - _TransitionWidth: 0.2
+    - _WhitePoint: 0.8
     m_Colors:
     - _Color0: {r: 0.02745098, g: 0.07450981, b: 0.11764706, a: 1}
     - _Color1: {r: 0.15294118, g: 0.37254903, b: 0.40784314, a: 1}
