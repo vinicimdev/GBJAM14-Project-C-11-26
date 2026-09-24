@@ -630,22 +630,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &174545172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 174544172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9d72418593e408b882e6790e9d3e8d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScrollText
-  text: {fileID: 706781752}
-  scrollBar: {fileID: 255213567}
-  thumb: {fileID: 255213571}
-  minThumbHeight: 6
 --- !u!114 &174544173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,6 +744,22 @@ RectTransform:
   m_AnchoredPosition: {x: 73.4, y: 64.2}
   m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &174545172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174544172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d72418593e408b882e6790e9d3e8d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScrollText
+  text: {fileID: 706781752}
+  scrollBar: {fileID: 255213567}
+  thumb: {fileID: 255213571}
+  minThumbHeight: 6
 --- !u!1 &189621888
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,6 +887,8 @@ MonoBehaviour:
   closeCreditsButton: {fileID: 539499244}
   howToWindow: {fileID: 255211566}
   closeHowToButton: {fileID: 174544172}
+  settingsButton: {fileID: 0}
+  settings: {fileID: 0}
   sfx: {fileID: 106855253}
   moveClip: {fileID: 8300000, guid: 7283636cf2ae3b3fca9effb4ea92ea29, type: 3}
   clickClip: {fileID: 8300000, guid: 15c09b7b95009f545a97e7b580a698eb, type: 3}
@@ -1123,7 +1125,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255213566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.5, y: -11, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1199,7 +1201,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255213570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 55, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1313,7 +1315,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286881170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.5, y: -11, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1389,7 +1391,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286881174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 55, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2031,22 +2033,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &539500244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539499244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9d72418593e408b882e6790e9d3e8d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScrollText
-  text: {fileID: 1898846717}
-  scrollBar: {fileID: 286881171}
-  thumb: {fileID: 286881175}
-  minThumbHeight: 6
 --- !u!114 &539499245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2161,6 +2147,22 @@ RectTransform:
   m_AnchoredPosition: {x: 67.1, y: 56.5}
   m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &539500244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539499244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d72418593e408b882e6790e9d3e8d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScrollText
+  text: {fileID: 1898846717}
+  scrollBar: {fileID: 286881171}
+  thumb: {fileID: 286881175}
+  minThumbHeight: 6
 --- !u!1 &617008895
 GameObject:
   m_ObjectHideFlags: 0
@@ -5376,9 +5378,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4375578191209250286, guid: 19382406100b69542a461ebab2e31097, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375578191209250286, guid: 19382406100b69542a461ebab2e31097, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375578191209250286, guid: 19382406100b69542a461ebab2e31097, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.24338627
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375578191209250286, guid: 19382406100b69542a461ebab2e31097, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375578191209250286, guid: 19382406100b69542a461ebab2e31097, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877967107119439456, guid: 19382406100b69542a461ebab2e31097, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5134455880828974073, guid: 19382406100b69542a461ebab2e31097, type: 3}
       propertyPath: m_Name
       value: HealthBar (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435604628915495055, guid: 19382406100b69542a461ebab2e31097, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435604628915495055, guid: 19382406100b69542a461ebab2e31097, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435604628915495055, guid: 19382406100b69542a461ebab2e31097, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920196092241121641, guid: 19382406100b69542a461ebab2e31097, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920196092241121641, guid: 19382406100b69542a461ebab2e31097, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920196092241121641, guid: 19382406100b69542a461ebab2e31097, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8426222990737411749, guid: 19382406100b69542a461ebab2e31097, type: 3}
       propertyPath: m_AnchorMax.x
