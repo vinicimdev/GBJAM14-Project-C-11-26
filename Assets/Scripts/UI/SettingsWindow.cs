@@ -22,9 +22,7 @@ public class SettingsWindow : MonoBehaviour
 
     [Header("Applies to")]
     [SerializeField] AudioMixer mixer;
-    [SerializeField] Material paletteMaterial;
-    [SerializeField, Tooltip("The first one is the default every launch starts on.")] Palette[] palettes;
-    [SerializeField, Range(0, 1)] float ditherWidth = 0.5f;
+    [SerializeField, Tooltip("The first one is the default every launch starts on. Keep it matching Pallete4Full.mat.")] Palette[] palettes;
 
     [Header("Feedback")]
     [SerializeField] AudioSource sfx;
@@ -41,6 +39,15 @@ public class SettingsWindow : MonoBehaviour
     // The palette isn't saved: it lasts until the game is closed or the page reloads.
     static int sessionPalette;
 
+    // Globals the palette shader reads instead of its material, so the material asset never changes.
+    static readonly int PaletteOn = Shader.PropertyToID("_SettingsPaletteOn");
+    static readonly int DitherOff = Shader.PropertyToID("_SettingsDitherOff");
+    static readonly int[] PaletteColors =
+    {
+        Shader.PropertyToID("_SettingsColor0"), Shader.PropertyToID("_SettingsColor1"),
+        Shader.PropertyToID("_SettingsColor2"), Shader.PropertyToID("_SettingsColor3"),
+    };
+
     public GameObject FirstRow => musicSlider.gameObject;
 
     // Enter Play Mode Options skip the domain reload, so statics would survive from the last play.
@@ -49,7 +56,25 @@ public class SettingsWindow : MonoBehaviour
     {
         sessionPalette = 0;
         TouchControlsChanged = null;
+        UseMaterialPalette();
     }
+
+    // Hands the palette and dither back to the material.
+    static void UseMaterialPalette()
+    {
+        Shader.SetGlobalFloat(PaletteOn, 0f);
+        Shader.SetGlobalFloat(DitherOff, 0f);
+    }
+
+#if UNITY_EDITOR
+    // Globals outlive play mode in the editor, so the scene view would keep the last palette otherwise.
+    [UnityEditor.InitializeOnLoadMethod]
+    static void UseMaterialPaletteWhenPlayStops() =>
+        UnityEditor.EditorApplication.playModeStateChanged += state =>
+        {
+            if (state == UnityEditor.PlayModeStateChange.EnteredEditMode) UseMaterialPalette();
+        };
+#endif
 
     void Awake() => window.SetActive(false);
 
@@ -72,9 +97,6 @@ public class SettingsWindow : MonoBehaviour
         fastTextToggle.onValueChanged.AddListener(on => Save("FastText", on ? 1 : 0));
         touchToggle.onValueChanged.AddListener(on => Save("Touch", on ? 1 : 0));
 
-#if UNITY_EDITOR
-        RememberMaterial();
-#endif
         Apply();
     }
 
@@ -104,60 +126,21 @@ public class SettingsWindow : MonoBehaviour
         mixer.SetFloat("SfxVolume", ToDecibels(sfxSlider.value));
 
         Palette p = palettes[paletteStepper.Value];
-        paletteMaterial.SetColor("_Color0", p.darkest);
-        paletteMaterial.SetColor("_Color1", p.dark);
-        paletteMaterial.SetColor("_Color2", p.light);
-        paletteMaterial.SetColor("_Color3", p.lightest);
-        paletteMaterial.SetFloat("_TransitionWidth", ditherToggle.isOn ? ditherWidth : 0f);
+        SetPaletteColor(0, p.darkest);
+        SetPaletteColor(1, p.dark);
+        SetPaletteColor(2, p.light);
+        SetPaletteColor(3, p.lightest);
+        Shader.SetGlobalFloat(PaletteOn, 1f);
+        // Dither on uses the material's Transition Width.
+        Shader.SetGlobalFloat(DitherOff, ditherToggle.isOn ? 0f : 1f);
 
         TouchControlsChanged?.Invoke(touchToggle.isOn);
     }
 
+    // Unlike material colors, globals aren't converted from sRGB, so do it here to match the material's look.
+    static void SetPaletteColor(int index, Color color) =>
+        Shader.SetGlobalColor(PaletteColors[index], QualitySettings.activeColorSpace == ColorSpace.Linear ? color.linear : color);
+
     // Sliders run 0..10. The mixer works in decibels, so step 0 has to be silence.
     static float ToDecibels(float step) => step > 0 ? Mathf.Log10(step / 10f) * 20f : -80f;
-
-#if UNITY_EDITOR
-    static readonly string[] MaterialColors = { "_Color0", "_Color1", "_Color2", "_Color3" };
-    static Material edited;
-    static Color[] savedColors;
-    static float savedWidth;
-
-    // In the editor, play mode writes into the material asset itself.
-    // Put its colors and dither back when play stops, so the next play and git both see the default.
-    void RememberMaterial()
-    {
-        if (edited != null) return;
-
-        edited = paletteMaterial;
-        var saved = new UnityEditor.SerializedObject(edited).FindProperty("m_SavedProperties");
-        savedColors = Array.ConvertAll(MaterialColors, c => SavedValue(saved, "m_Colors", c).colorValue);
-        savedWidth = SavedValue(saved, "m_Floats", "_TransitionWidth").floatValue;
-        UnityEditor.EditorApplication.playModeStateChanged += RestoreMaterial;
-    }
-
-    static void RestoreMaterial(UnityEditor.PlayModeStateChange state)
-    {
-        if (state != UnityEditor.PlayModeStateChange.ExitingPlayMode) return;
-
-        UnityEditor.EditorApplication.playModeStateChanged -= RestoreMaterial;
-        var so = new UnityEditor.SerializedObject(edited);
-        var saved = so.FindProperty("m_SavedProperties");
-        for (int i = 0; i < MaterialColors.Length; i++) SavedValue(saved, "m_Colors", MaterialColors[i]).colorValue = savedColors[i];
-        SavedValue(saved, "m_Floats", "_TransitionWidth").floatValue = savedWidth;
-        so.ApplyModifiedPropertiesWithoutUndo();
-        edited = null;
-    }
-
-    // The serialized numbers, not GetColor/SetColor: those round-trip through linear space and drift.
-    static UnityEditor.SerializedProperty SavedValue(UnityEditor.SerializedProperty saved, string list, string name)
-    {
-        UnityEditor.SerializedProperty entries = saved.FindPropertyRelative(list);
-        for (int i = 0; i < entries.arraySize; i++)
-        {
-            UnityEditor.SerializedProperty entry = entries.GetArrayElementAtIndex(i);
-            if (entry.FindPropertyRelative("first").stringValue == name) return entry.FindPropertyRelative("second");
-        }
-        throw new ArgumentException($"{name} isn't saved on {edited.name}");
-    }
-#endif
 }

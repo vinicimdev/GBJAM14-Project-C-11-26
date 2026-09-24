@@ -3134,7 +3134,6 @@ MonoBehaviour:
   fastTextToggle: {fileID: 7145181466863213130}
   touchToggle: {fileID: 4316926124390598588}
   mixer: {fileID: 24100000, guid: c871e7b67db3cb093b14e459be47eafe, type: 2}
-  paletteMaterial: {fileID: 2100000, guid: d88a65b7979efc14fad7c05fd81434e7, type: 2}
   palettes:
   - name: SEA
     darkest: {r: 0.02745098, g: 0.07450981, b: 0.11764706, a: 1}
@@ -3156,7 +3155,6 @@ MonoBehaviour:
     dark: {r: 0.4862745, g: 0.1764706, b: 0.07058824, a: 1}
     light: {r: 0.8784314, g: 0.5019608, b: 0.22745098, a: 1}
     lightest: {r: 0.9764706, g: 0.89411765, b: 0.7176471, a: 1}
-  ditherWidth: 0.2
   sfx: {fileID: 8912484711991276240}
   tickClip: {fileID: 8300000, guid: 7283636cf2ae3b3fca9effb4ea92ea29, type: 3}
 --- !u!1 &8403747157835421376

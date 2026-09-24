@@ -70,6 +70,15 @@ Shader "Hidden/Custom/Palette4_Fullscreen"
             // Set globally by the camera to keep the pattern locked to the world.
             float2 _DitherOffset;
 
+            // Set globally by SettingsWindow while the game runs, so the material asset never changes.
+            // While _SettingsPaletteOn is 0 (edit mode, a fresh launch) the material's own values show.
+            float  _SettingsPaletteOn;
+            float4 _SettingsColor0;
+            float4 _SettingsColor1;
+            float4 _SettingsColor2;
+            float4 _SettingsColor3;
+            float  _SettingsDitherOff;
+
             // Recursive Bayer matrix of size 2^n, in (0,1).
             float Bayer(uint2 p, uint n)
             {
@@ -121,13 +130,21 @@ Shader "Hidden/Custom/Palette4_Fullscreen"
 
                 // t sits between bands floor(t) and floor(t)+1; the cutoff is at the midpoint.
                 float t    = BandSpace(l);
-                float up   = saturate((frac(t) - 0.5) / max(_TransitionWidth, 1e-4) + 0.5);
+                float width = _SettingsDitherOff > 0.5 ? 0.0 : _TransitionWidth;
+                float up   = saturate((frac(t) - 0.5) / max(width, 1e-4) + 0.5);
                 int2  p    = (int2)floor((input.positionCS.xy + _DitherOffset) / max(_DitherScale, 1.0));
                 int   idx  = min((int)t + (up > Pattern(p) ? 1 : 0), 3);
 
                 if (_DebugView > 1.5) idx = min((int)round(t), 3);
 
                 float3 pal[4] = { _Color0.rgb, _Color1.rgb, _Color2.rgb, _Color3.rgb };
+                if (_SettingsPaletteOn > 0.5)
+                {
+                    pal[0] = _SettingsColor0.rgb;
+                    pal[1] = _SettingsColor1.rgb;
+                    pal[2] = _SettingsColor2.rgb;
+                    pal[3] = _SettingsColor3.rgb;
+                }
                 return half4(lerp(src, pal[idx], _Blend), 1.0);
             }
             ENDHLSL
