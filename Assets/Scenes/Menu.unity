@@ -1802,7 +1802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &769130666
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3330,7 +3330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: -9}
+  m_AnchoredPosition: {x: 0, y: -9}
   m_SizeDelta: {x: 40, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1665494442
@@ -3598,8 +3598,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2.5}
-  m_SizeDelta: {x: 150, y: 140}
+  m_AnchoredPosition: {x: 0, y: 1.3}
+  m_SizeDelta: {x: 140, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1716157060
 MonoBehaviour:
@@ -3621,57 +3621,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Jhorro - Designer
-
-    Paul A - VFX/SFX
-
-    Vinicius J - Programmer
-
-    Zander
-    A - 3D Artist
-
-
-    Special thanks to:
-
-    Josemar J - Composer
-
-
-    Made for
-    GBJAM14
-
-    Unity 6.3.12f1
-
-
-    Jhorro - Designer
-
-    Paul A - VFX/SFX
-
-    Vinicius
-    J - Programmer
-
-    Zander A - 3D Artist
-
-
-    Special thanks to:
-
-    Josemar
-    J - Composer
-
-
-    Made for GBJAM14
-
-    Unity 6.3.12f1
-
-
-    BR / CA / US
-
-    2026
-
-
-    BR
-    / CA / US
-
-    2026'
+  m_text: "Jhonnatan Barbosa \nGame and Art Direction, Game Design, Cinematic and
+    UI\njhorro.com\n\nVinicius Januzzi\nGameplay, Enemy AI and UI Programmer. Music
+    and SFX\nvinicimdev.github.io\n\nZander Aguirre\n3D Artist\n\nPaul A\nSFX and
+    VFX\n\n\nSpecial thanks to:\nJosemar J - Composer\n\nMade for GBJAM14\nUnity
+    6.3.12f1\n\nBR / CA / US\n2026"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 339e4f3fa3a2b5dcabcb75014e6e0f16, type: 2}
   m_sharedMaterial: {fileID: 5761925423816041219, guid: 339e4f3fa3a2b5dcabcb75014e6e0f16, type: 2}
