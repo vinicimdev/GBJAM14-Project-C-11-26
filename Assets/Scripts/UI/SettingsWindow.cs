@@ -18,7 +18,6 @@ public class SettingsWindow : MonoBehaviour
     [SerializeField] OptionStepper paletteStepper;
     [SerializeField] Toggle ditherToggle;
     [SerializeField] Toggle fastTextToggle;
-    [SerializeField] Toggle touchToggle;
 
     [Header("Applies to")]
     [SerializeField] AudioMixer mixer;
@@ -29,12 +28,6 @@ public class SettingsWindow : MonoBehaviour
     [SerializeField] AudioClip tickClip;
 
     public static bool FastText => PlayerPrefs.GetInt("FastText", 0) == 1;
-
-    // Phones and tablets start with the touch buttons showing.
-    public static bool TouchControls => PlayerPrefs.GetInt("Touch", Application.isMobilePlatform ? 1 : 0) == 1;
-
-    // Raised with the TOUCH row's value every time settings are applied. The touch buttons listen here.
-    public static event Action<bool> TouchControlsChanged;
 
     // The palette isn't saved: it lasts until the game is closed or the page reloads.
     static int sessionPalette;
@@ -55,7 +48,6 @@ public class SettingsWindow : MonoBehaviour
     static void ResetSession()
     {
         sessionPalette = 0;
-        TouchControlsChanged = null;
         UseMaterialPalette();
     }
 
@@ -88,14 +80,12 @@ public class SettingsWindow : MonoBehaviour
         paletteStepper.SetValueWithoutNotify(sessionPalette);
         ditherToggle.SetIsOnWithoutNotify(PlayerPrefs.GetInt("Dither", 1) == 1);
         fastTextToggle.SetIsOnWithoutNotify(FastText);
-        touchToggle.SetIsOnWithoutNotify(TouchControls);
 
         musicSlider.onValueChanged.AddListener(v => Save("Music", (int)v));
         sfxSlider.onValueChanged.AddListener(v => Save("Sfx", (int)v));
         paletteStepper.onValueChanged.AddListener(i => { sessionPalette = i; Changed(); });
         ditherToggle.onValueChanged.AddListener(on => Save("Dither", on ? 1 : 0));
         fastTextToggle.onValueChanged.AddListener(on => Save("FastText", on ? 1 : 0));
-        touchToggle.onValueChanged.AddListener(on => Save("Touch", on ? 1 : 0));
 
         Apply();
     }
@@ -133,8 +123,6 @@ public class SettingsWindow : MonoBehaviour
         Shader.SetGlobalFloat(PaletteOn, 1f);
         // Dither on uses the material's Transition Width.
         Shader.SetGlobalFloat(DitherOff, ditherToggle.isOn ? 0f : 1f);
-
-        TouchControlsChanged?.Invoke(touchToggle.isOn);
     }
 
     // Unlike material colors, globals aren't converted from sRGB, so do it here to match the material's look.
