@@ -11,6 +11,7 @@ public class Typewriter : MonoBehaviour
     [SerializeField] AudioSource blip;
     [SerializeField] float charsPerSecond = 24f;
     [SerializeField] float punctuationPause = 0.25f;
+    [SerializeField, Min(1), Tooltip("How many times faster text appears with FAST TEXT on in Settings.")] float fastTextSpeed = 3f;
     [SerializeField, Min(1)] int blipEvery = 3;
     [SerializeField] Vector2 blipPitch = new Vector2(0.92f, 1.08f);
 
@@ -80,6 +81,7 @@ public class Typewriter : MonoBehaviour
     {
         int shown = from;
         float wait = 0f;
+        float speed = SettingsWindow.FastText ? fastTextSpeed : 1f;
         tmp.maxVisibleCharacters = shown;
 
         while (shown < to)
@@ -100,7 +102,7 @@ public class Typewriter : MonoBehaviour
 
                 if (c != ' ' && shown % blipEvery == 0) Blip();
 
-                wait += ".,!?".IndexOf(c) >= 0 ? punctuationPause : 1f / charsPerSecond;
+                wait += (".,!?".IndexOf(c) >= 0 ? punctuationPause : 1f / charsPerSecond) / speed;
             }
 
             tmp.maxVisibleCharacters = shown;
