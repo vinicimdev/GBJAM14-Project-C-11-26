@@ -50,6 +50,7 @@ public class EnemyDeath : MonoBehaviour
     private void HandleDeath()
     {
         ScoreManager.Instance.AddScore(scoreOnKill);
+        ScoreManager.Instance.AddKill();
 
         if (_movement.HasStolenGold == true)
         {

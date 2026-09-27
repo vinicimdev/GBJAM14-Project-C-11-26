@@ -6,8 +6,10 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance { get; private set; }
 
     public int CurrentScore { get; private set; }
+    public int TotalKills { get; private set; }
 
     public event Action<int> OnScoreChanged;
+    public event Action<int> OnKillsChanged;
 
     private void Awake()
     {
@@ -30,5 +32,11 @@ public class ScoreManager : MonoBehaviour
     {
         CurrentScore -= amount;
         OnScoreChanged?.Invoke(CurrentScore);
+    }
+
+    public void AddKill()
+    {
+        TotalKills++;
+        OnKillsChanged?.Invoke(TotalKills);
     }
 }

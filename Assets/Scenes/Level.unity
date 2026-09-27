@@ -860,6 +860,7 @@ MonoBehaviour:
   playerHealth: {fileID: 2131268863}
   pointsNumberText: {fileID: 1887580310}
   playerHealthText: {fileID: 1704143777}
+  totalKillsText: {fileID: 866152111}
   roundNumberText: {fileID: 1738956843}
   timerNumberText: {fileID: 1345977178}
   enemiesOnDeckText: {fileID: 1429660336}
@@ -8531,7 +8532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoundManager
   roundDuration: 15
   durationAddedPerRound: 5
-  cooldownDuration: 3
+  cooldownDuration: 5
   startingMaxAlive: 2
   enemiesAddedPerRound: 1
   startingSpawnInterval: 5

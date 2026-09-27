@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 
 /// <summary>
-/// Updates the top and bottom bar texts: points, player health, round, round timer and enemies on deck.
+/// Updates the top and bottom bar texts: points, player health, total kills, round, round timer and enemies on deck.
 /// </summary>
 public class HUDController : MonoBehaviour
 {
@@ -22,6 +22,8 @@ public class HUDController : MonoBehaviour
     [SerializeField, Tooltip("")]
     private TMP_Text playerHealthText;
     [SerializeField, Tooltip("")]
+    private TMP_Text totalKillsText;
+    [SerializeField, Tooltip("")]
     private TMP_Text roundNumberText;
     [SerializeField, Tooltip("")]
     private TMP_Text timerNumberText;
@@ -35,12 +37,14 @@ public class HUDController : MonoBehaviour
     {
         UpdateScore(scoreManager.CurrentScore);
         UpdatePlayerHealth(playerHealth.CurrentHealth);
+        UpdateKills(scoreManager.TotalKills);
         UpdateRound(roundManager.CurrentRound);
     }
 
     private void OnEnable()
     {
         scoreManager.OnScoreChanged += UpdateScore;
+        scoreManager.OnKillsChanged += UpdateKills;
         playerHealth.OnHealthChanged += UpdatePlayerHealth;
         roundManager.OnRoundChanged += UpdateRound;
     }
@@ -48,6 +52,7 @@ public class HUDController : MonoBehaviour
     private void OnDisable()
     {
         scoreManager.OnScoreChanged -= UpdateScore;
+        scoreManager.OnKillsChanged -= UpdateKills;
         playerHealth.OnHealthChanged -= UpdatePlayerHealth;
         roundManager.OnRoundChanged -= UpdateRound;
     }
@@ -77,6 +82,11 @@ public class HUDController : MonoBehaviour
     private void UpdatePlayerHealth(int currentHealth)
     {
         playerHealthText.text = currentHealth.ToString();
+    }
+
+    private void UpdateKills(int kills)
+    {
+        totalKillsText.text = kills.ToString("000");
     }
 
     private void UpdateRound(int round)
