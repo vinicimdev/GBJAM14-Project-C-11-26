@@ -26,7 +26,10 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField, Tooltip("")]
     private bool spawnOnStart = true;
 
-    private readonly List<GameObject> _alive = new();
+    public int AliveCount => _alive.Count;
+
+    private readonly List<CharacterHealth> _alive = new();
+    private bool _isSpawning = true;
     private float _nextSpawnTime;
     private int _sequentialIndex;
 
@@ -41,7 +44,12 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        _alive.RemoveAll(e => e == null);
+        _alive.RemoveAll(e => e == null || e.IsDead == true);
+
+        if (_isSpawning == false)
+        {
+            return;
+        }
 
         if (Time.time < _nextSpawnTime)
         {
@@ -66,7 +74,7 @@ public class EnemySpawner : MonoBehaviour
         }
 
         GameObject enemy = Instantiate(enemyPrefab, point.position, point.rotation);
-        _alive.Add(enemy);
+        _alive.Add(enemy.GetComponent<CharacterHealth>());
     }
 
     private Transform ChooseSpawnPoint()
@@ -109,5 +117,10 @@ public class EnemySpawner : MonoBehaviour
     public void SetSpawnInterval(float value)
     {
         spawnInterval = value;
+    }
+
+    public void SetSpawning(bool value)
+    {
+        _isSpawning = value;
     }
 }
