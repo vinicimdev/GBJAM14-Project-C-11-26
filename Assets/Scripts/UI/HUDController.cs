@@ -26,12 +26,23 @@ public class HUDController : MonoBehaviour
     [SerializeField, Tooltip("")]
     private TMP_Text roundNumberText;
     [SerializeField, Tooltip("")]
+    private TMP_Text timerText;
+    [SerializeField, Tooltip("")]
     private TMP_Text timerNumberText;
     [SerializeField, Tooltip("")]
     private TMP_Text enemiesOnDeckText;
 
+    [Header("Timer Labels")]
+    [SerializeField, Tooltip("")]
+    private string playingLabel = "LFT";
+    [SerializeField, Tooltip("")]
+    private string clearingLabel = "CLR";
+    [SerializeField, Tooltip("")]
+    private string cooldownLabel = "CLD";
+
     private int _shownSeconds = -1;
     private int _shownOnDeck = -1;
+    private RoundManager.RoundState? _shownState;
 
     private void Start()
     {
@@ -65,6 +76,17 @@ public class HUDController : MonoBehaviour
         {
             _shownSeconds = seconds;
             timerNumberText.text = $"{seconds / 60}:{seconds % 60:00}";
+        }
+
+        if (roundManager.CurrentState != _shownState)
+        {
+            _shownState = roundManager.CurrentState;
+            timerText.text = roundManager.CurrentState switch
+            {
+                RoundManager.RoundState.Clearing => clearingLabel,
+                RoundManager.RoundState.Cooldown => cooldownLabel,
+                _ => playingLabel,
+            };
         }
 
         if (spawner.AliveCount != _shownOnDeck)
