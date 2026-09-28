@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 92b84d965ba0b39458c7ef8896124c51
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 164400
+  packageName: Polyzero Free Procedural Power Line Generator
+  packageVersion: 1.2
+  assetPath: Assets/Polyzero/ElectricCables/README_QUICK_START.md
+  uploadId: 986542

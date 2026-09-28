@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 336f7e73cd1619645bd5dd7a644429e1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 164400
+  packageName: Polyzero Free Procedural Power Line Generator
+  packageVersion: 1.2
+  assetPath: Assets/Polyzero/ElectricCables/Profiles/Telephone_Wire.asset
+  uploadId: 986542

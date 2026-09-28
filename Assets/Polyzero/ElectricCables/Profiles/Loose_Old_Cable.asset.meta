@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 75c9da6002e92ef4db254822c9b9962f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 164400
+  packageName: Polyzero Free Procedural Power Line Generator
+  packageVersion: 1.2
+  assetPath: Assets/Polyzero/ElectricCables/Profiles/Loose_Old_Cable.asset
+  uploadId: 986542

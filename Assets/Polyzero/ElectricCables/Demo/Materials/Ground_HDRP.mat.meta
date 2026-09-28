@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b2fb9f4487539cf41929cf966b63bfca
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 164400
+  packageName: Polyzero Free Procedural Power Line Generator
+  packageVersion: 1.2
+  assetPath: Assets/Polyzero/ElectricCables/Demo/Materials/Ground_HDRP.mat
+  uploadId: 986542
