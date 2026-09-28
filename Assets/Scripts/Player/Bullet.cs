@@ -38,6 +38,13 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
+    public void Shoot(Vector3 dir, float speed, float overrideRange, float overrideCurveSpeed)
+    {
+        assistRange = overrideRange;
+        assistCurveSpeed = overrideCurveSpeed;
+        Shoot(dir, speed);
+    }
+
     private void Update()
     {
         Transform target = FindNearestEnemyInCone();
@@ -50,7 +57,6 @@ public class Bullet : MonoBehaviour
             if (desired.sqrMagnitude > 0.0001f)
             {
                 desired.Normalize();
-
                 _direction = Vector3.RotateTowards(_direction, desired, assistCurveSpeed * Mathf.Deg2Rad * Time.deltaTime, 0f);
             }
         }

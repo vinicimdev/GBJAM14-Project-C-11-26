@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 1259238475755278508}
   - component: {fileID: 8569718800546380517}
   - component: {fileID: 4628032541560418340}
+  - component: {fileID: 8192311116332185780}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -189,6 +190,8 @@ MonoBehaviour:
   fireAction: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   aimCamera: {fileID: 0}
   characterAnimatorController: {fileID: 1259238475755278508}
+  shootAudioSource: {fileID: 0}
+  shootAudioClip: {fileID: 0}
 --- !u!114 &236264520692802537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterHealth
   maxHealth: 5
   invincibilityDuration: 0.8
+  onDamageAudioSource: {fileID: 0}
+  onDamageAudioClip: {fileID: 0}
 --- !u!114 &3381917389436523050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,8 +224,9 @@ MonoBehaviour:
   behavioursToDisable:
   - {fileID: 215315515951903598}
   - {fileID: 2591762558033718646}
-  characterRigidbody: {fileID: 0}
   characterAnimatorController: {fileID: 1259238475755278508}
+  onStunAudioSource: {fileID: 0}
+  onStunAudioClip: {fileID: 0}
 --- !u!114 &1259238475755278508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +287,33 @@ NavMeshAgent:
   m_BaseOffset: 0.88
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!54 &8192311116332185780
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532479338910953436}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &8456465977615468647
 PrefabInstance:
   m_ObjectHideFlags: 0
