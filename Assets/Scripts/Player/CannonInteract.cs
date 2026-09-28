@@ -46,6 +46,14 @@ public class CannonInteract : MonoBehaviour
     {
         if (other.CompareTag("Player") == true)
         {
+            _playerInside = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player") == true)
+        {
             _playerInside = false;
             _holdTimer = 0f;
             _upgradeTriggeredThisHold = false;
