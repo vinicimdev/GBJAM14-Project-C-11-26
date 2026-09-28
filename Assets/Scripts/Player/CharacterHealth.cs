@@ -37,8 +37,6 @@ public class CharacterHealth : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        Debug.Log($"{name} got hit, damage: {amount}! Health left: {CurrentHealth}.");
-
         if (IsDead) return;
 
         if (IsInvincible) return;
