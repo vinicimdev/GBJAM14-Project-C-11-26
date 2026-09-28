@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &993599160517058319
+--- !u!1 &116301225887430119
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2838645207167028562}
-  - component: {fileID: 8236172182920572183}
-  - component: {fileID: 1706206717895475842}
-  - component: {fileID: 4739090518199089933}
-  - component: {fileID: 6175883598456103631}
+  - component: {fileID: 2087307923057306658}
+  - component: {fileID: 5962602947628131639}
+  - component: {fileID: 440841395003360116}
+  - component: {fileID: 1638833536468302422}
+  - component: {fileID: 6102009982784955773}
   m_Layer: 0
-  m_Name: AutoCable_02_03
+  m_Name: AutoCable_04_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2838645207167028562
+--- !u!4 &2087307923057306658
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993599160517058319}
+  m_GameObject: {fileID: 116301225887430119}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -35,21 +35,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5258146909306457060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8236172182920572183
+--- !u!114 &5962602947628131639
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993599160517058319}
+  m_GameObject: {fileID: 116301225887430119}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
   mode: 0
-  startPoint: {fileID: 3469634126507292262}
-  endPoint: {fileID: 1666670545474619665}
+  startPoint: {fileID: 6314629660952533836}
+  endPoint: {fileID: 8383063460694256439}
   localStartPoint: {x: -2, y: 0, z: 0}
   localEndPoint: {x: 2, y: 0, z: 0}
   useEndpointRotation: 1
@@ -67,10 +67,10 @@ MonoBehaviour:
   brokenEndDrop: 0.45
   brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
   windSway: 1
-  windAmplitude: 0.044565022
-  windSpeed: 3.3129704
-  windSpatialFrequency: 0.19676474
-  windDirection: {x: 0.9582221, y: 0, z: 0.28602535}
+  windAmplitude: 0.023040844
+  windSpeed: 2.8276415
+  windSpatialFrequency: 0.10006305
+  windDirection: {x: 0.99946713, y: 0, z: -0.032643247}
   endpointWindLock: 1
   useDistanceLod: 1
   lodCamera: {fileID: 0}
@@ -86,8 +86,8 @@ MonoBehaviour:
   disableBeyondFarDistance: 0
   visualMode: 1
   lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 1706206717895475842}
-  meshRenderer: {fileID: 4739090518199089933}
+  meshFilter: {fileID: 440841395003360116}
+  meshRenderer: {fileID: 1638833536468302422}
   cableWidth: 0.025
   radialSegments: 6
   cableMaterial: {fileID: 0}
@@ -102,21 +102,21 @@ MonoBehaviour:
   rebuildInEditMode: 1
   drawGizmos: 1
   gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &1706206717895475842
+--- !u!33 &440841395003360116
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993599160517058319}
+  m_GameObject: {fileID: 116301225887430119}
   m_Mesh: {fileID: 0}
---- !u!23 &4739090518199089933
+--- !u!23 &1638833536468302422
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993599160517058319}
+  m_GameObject: {fileID: 116301225887430119}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -159,13 +159,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6175883598456103631
+--- !u!114 &6102009982784955773
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993599160517058319}
+  m_GameObject: {fileID: 116301225887430119}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
@@ -185,7 +185,7 @@ MonoBehaviour:
   spatialFrequencyVariation: 0.5
   directionYawVariationDegrees: 22
   lineIndexOffsetStrength: 0.65
---- !u!1 &1293469577859293738
+--- !u!1 &752728480918406326
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,25 +193,253 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8954418735170741212}
-  - component: {fileID: 3211517451914198801}
-  - component: {fileID: 3470236589249445520}
-  - component: {fileID: 1488346568311547491}
-  - component: {fileID: 878516817386144588}
+  - component: {fileID: 3566771049287857048}
+  - component: {fileID: 3516795417731324887}
+  - component: {fileID: 8723832518006850621}
+  - component: {fileID: 762550634181307172}
   m_Layer: 0
-  m_Name: AutoCable_01_03
+  m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8954418735170741212
+--- !u!4 &3566771049287857048
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293469577859293738}
+  m_GameObject: {fileID: 752728480918406326}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.13668251, y: 12.740002, z: 22.5}
+  m_LocalScale: {x: 0.6729599, y: 11.919608, z: 0.67296}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 302101791003753576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!33 &3516795417731324887
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752728480918406326}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8723832518006850621
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752728480918406326}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 08f1899e69f8d2b46b3133a3741cbf72, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &762550634181307172
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752728480918406326}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!1 &790937553421806029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 391912018358156134}
+  - component: {fileID: 4035613025805816102}
+  - component: {fileID: 5881847776311684794}
+  - component: {fileID: 1354895326817315841}
+  m_Layer: 0
+  m_Name: Cylinder (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &391912018358156134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790937553421806029}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.13668251, y: 24, z: 22.9}
+  m_LocalScale: {x: 0.6729599, y: 9.442356, z: 0.67296}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 302101791003753576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!33 &4035613025805816102
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790937553421806029}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &5881847776311684794
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790937553421806029}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 08f1899e69f8d2b46b3133a3741cbf72, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &1354895326817315841
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790937553421806029}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!1 &1153747261074619569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6343786564026236330}
+  - component: {fileID: 6976177656434163458}
+  - component: {fileID: 7500924910358774642}
+  - component: {fileID: 182078306503794300}
+  - component: {fileID: 7050534301463577357}
+  m_Layer: 0
+  m_Name: AutoCable_02_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6343786564026236330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153747261074619569}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -220,21 +448,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5258146909306457060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3211517451914198801
+--- !u!114 &6976177656434163458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293469577859293738}
+  m_GameObject: {fileID: 1153747261074619569}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
   mode: 0
-  startPoint: {fileID: 6428118389513510885}
-  endPoint: {fileID: 3469634126507292262}
+  startPoint: {fileID: 852862215297414692}
+  endPoint: {fileID: 3229732358008768851}
   localStartPoint: {x: -2, y: 0, z: 0}
   localEndPoint: {x: 2, y: 0, z: 0}
   useEndpointRotation: 1
@@ -252,10 +480,10 @@ MonoBehaviour:
   brokenEndDrop: 0.45
   brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
   windSway: 1
-  windAmplitude: 0.023307785
-  windSpeed: 4.3214564
-  windSpatialFrequency: 0.12610865
-  windDirection: {x: 0.99957776, y: 0, z: 0.029058663}
+  windAmplitude: 0.040107418
+  windSpeed: 2.2299147
+  windSpatialFrequency: 0.1456642
+  windDirection: {x: 0.96766305, y: 0, z: 0.25224653}
   endpointWindLock: 1
   useDistanceLod: 1
   lodCamera: {fileID: 0}
@@ -271,8 +499,8 @@ MonoBehaviour:
   disableBeyondFarDistance: 0
   visualMode: 1
   lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 3470236589249445520}
-  meshRenderer: {fileID: 1488346568311547491}
+  meshFilter: {fileID: 7500924910358774642}
+  meshRenderer: {fileID: 182078306503794300}
   cableWidth: 0.025
   radialSegments: 6
   cableMaterial: {fileID: 0}
@@ -287,21 +515,21 @@ MonoBehaviour:
   rebuildInEditMode: 1
   drawGizmos: 1
   gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &3470236589249445520
+--- !u!33 &7500924910358774642
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293469577859293738}
+  m_GameObject: {fileID: 1153747261074619569}
   m_Mesh: {fileID: 0}
---- !u!23 &1488346568311547491
+--- !u!23 &182078306503794300
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293469577859293738}
+  m_GameObject: {fileID: 1153747261074619569}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -344,13 +572,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &878516817386144588
+--- !u!114 &7050534301463577357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293469577859293738}
+  m_GameObject: {fileID: 1153747261074619569}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
@@ -528,7 +756,7 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!1 &2654551536372524233
+--- !u!1 &2293075282858168881
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -536,25 +764,251 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6320031309870703396}
-  - component: {fileID: 6345611734778873447}
-  - component: {fileID: 7770007818785139500}
-  - component: {fileID: 9068325359072293052}
-  - component: {fileID: 8671559845465898705}
+  - component: {fileID: 6265114070214852498}
+  - component: {fileID: 158700750543284176}
+  - component: {fileID: 2507811381053860686}
+  - component: {fileID: 2252127909355542713}
   m_Layer: 0
-  m_Name: AutoCable_02_01
+  m_Name: Plane (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6320031309870703396
+--- !u!4 &6265114070214852498
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2654551536372524233}
+  m_GameObject: {fileID: 2293075282858168881}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.36668253, y: 19.48, z: 22.68}
+  m_LocalScale: {x: 24.432085, y: 6.6062684, z: 22.669294}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 302101791003753576}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!33 &158700750543284176
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2293075282858168881}
+  m_Mesh: {fileID: 4300000, guid: c07249e1a3b20354381f0399b854eb1c, type: 2}
+--- !u!23 &2507811381053860686
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2293075282858168881}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cc8cab68290e3674199cf8b0e464288e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2252127909355542713
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2293075282858168881}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &3016373145979056237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 520407042908997954}
+  - component: {fileID: 639248528149577928}
+  - component: {fileID: 193268309390135374}
+  - component: {fileID: 3435257747841852357}
+  m_Layer: 0
+  m_Name: Plane (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &520407042908997954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3016373145979056237}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.99929416, z: -0.037566576, w: 0}
+  m_LocalPosition: {x: 0.36668253, y: 6.419998, z: 22.33}
+  m_LocalScale: {x: 24.432085, y: 6.933278, z: 22.669292}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 302101791003753576}
+  m_LocalEulerAnglesHint: {x: 4.306, y: 180, z: 0}
+--- !u!33 &639248528149577928
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3016373145979056237}
+  m_Mesh: {fileID: 4300000, guid: c07249e1a3b20354381f0399b854eb1c, type: 2}
+--- !u!23 &193268309390135374
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3016373145979056237}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cc8cab68290e3674199cf8b0e464288e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3435257747841852357
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3016373145979056237}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &3083811222650305177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2790718180220399603}
+  - component: {fileID: 6760839076274835840}
+  - component: {fileID: 3909942337270229915}
+  - component: {fileID: 5678537999822835057}
+  - component: {fileID: 2567753991931954490}
+  m_Layer: 0
+  m_Name: AutoCable_01_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2790718180220399603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3083811222650305177}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -563,21 +1017,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5258146909306457060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6345611734778873447
+--- !u!114 &6760839076274835840
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2654551536372524233}
+  m_GameObject: {fileID: 3083811222650305177}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
   mode: 0
-  startPoint: {fileID: 852862215297414692}
-  endPoint: {fileID: 3229732358008768851}
+  startPoint: {fileID: 6428118389513510885}
+  endPoint: {fileID: 3469634126507292262}
   localStartPoint: {x: -2, y: 0, z: 0}
   localEndPoint: {x: 2, y: 0, z: 0}
   useEndpointRotation: 1
@@ -595,10 +1049,10 @@ MonoBehaviour:
   brokenEndDrop: 0.45
   brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
   windSway: 1
-  windAmplitude: 0.040107418
-  windSpeed: 2.2299147
-  windSpatialFrequency: 0.1456642
-  windDirection: {x: 0.96766305, y: 0, z: 0.25224653}
+  windAmplitude: 0.023307785
+  windSpeed: 4.3214564
+  windSpatialFrequency: 0.12610865
+  windDirection: {x: 0.99957776, y: 0, z: 0.029058663}
   endpointWindLock: 1
   useDistanceLod: 1
   lodCamera: {fileID: 0}
@@ -614,8 +1068,8 @@ MonoBehaviour:
   disableBeyondFarDistance: 0
   visualMode: 1
   lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 7770007818785139500}
-  meshRenderer: {fileID: 9068325359072293052}
+  meshFilter: {fileID: 3909942337270229915}
+  meshRenderer: {fileID: 5678537999822835057}
   cableWidth: 0.025
   radialSegments: 6
   cableMaterial: {fileID: 0}
@@ -630,21 +1084,21 @@ MonoBehaviour:
   rebuildInEditMode: 1
   drawGizmos: 1
   gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &7770007818785139500
+--- !u!33 &3909942337270229915
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2654551536372524233}
+  m_GameObject: {fileID: 3083811222650305177}
   m_Mesh: {fileID: 0}
---- !u!23 &9068325359072293052
+--- !u!23 &5678537999822835057
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2654551536372524233}
+  m_GameObject: {fileID: 3083811222650305177}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -687,13 +1141,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8671559845465898705
+--- !u!114 &2567753991931954490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2654551536372524233}
+  m_GameObject: {fileID: 3083811222650305177}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
@@ -713,7 +1167,7 @@ MonoBehaviour:
   spatialFrequencyVariation: 0.5
   directionYawVariationDegrees: 22
   lineIndexOffsetStrength: 0.65
---- !u!1 &2704261259249796636
+--- !u!1 &3183676631877501890
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -721,25 +1175,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3809777909700699487}
-  - component: {fileID: 8859772007353998679}
-  - component: {fileID: 6178370447535362309}
-  - component: {fileID: 6012123078309615433}
-  - component: {fileID: 3912653429192782757}
+  - component: {fileID: 5299200574804569769}
+  - component: {fileID: 8591343065315738249}
+  - component: {fileID: 2479376653652574700}
+  - component: {fileID: 208630497246430155}
+  - component: {fileID: 1386644020982558281}
   m_Layer: 0
-  m_Name: AutoCable_03_03
+  m_Name: AutoCable_03_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3809777909700699487
+--- !u!4 &5299200574804569769
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2704261259249796636}
+  m_GameObject: {fileID: 3183676631877501890}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -748,21 +1202,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5258146909306457060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8859772007353998679
+--- !u!114 &8591343065315738249
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2704261259249796636}
+  m_GameObject: {fileID: 3183676631877501890}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
   mode: 0
-  startPoint: {fileID: 1666670545474619665}
-  endPoint: {fileID: 6314629660952533836}
+  startPoint: {fileID: 204735784243984016}
+  endPoint: {fileID: 4779577199840453837}
   localStartPoint: {x: -2, y: 0, z: 0}
   localEndPoint: {x: 2, y: 0, z: 0}
   useEndpointRotation: 1
@@ -780,10 +1234,10 @@ MonoBehaviour:
   brokenEndDrop: 0.45
   brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
   windSway: 1
-  windAmplitude: 0.035606902
-  windSpeed: 3.7937033
-  windSpatialFrequency: 0.0930677
-  windDirection: {x: 0.95169747, y: 0, z: 0.30703756}
+  windAmplitude: 0.028028432
+  windSpeed: 4.423888
+  windSpatialFrequency: 0.19772294
+  windDirection: {x: 0.9996892, y: 0, z: 0.024930902}
   endpointWindLock: 1
   useDistanceLod: 1
   lodCamera: {fileID: 0}
@@ -799,8 +1253,8 @@ MonoBehaviour:
   disableBeyondFarDistance: 0
   visualMode: 1
   lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 6178370447535362309}
-  meshRenderer: {fileID: 6012123078309615433}
+  meshFilter: {fileID: 2479376653652574700}
+  meshRenderer: {fileID: 208630497246430155}
   cableWidth: 0.025
   radialSegments: 6
   cableMaterial: {fileID: 0}
@@ -815,21 +1269,21 @@ MonoBehaviour:
   rebuildInEditMode: 1
   drawGizmos: 1
   gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &6178370447535362309
+--- !u!33 &2479376653652574700
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2704261259249796636}
+  m_GameObject: {fileID: 3183676631877501890}
   m_Mesh: {fileID: 0}
---- !u!23 &6012123078309615433
+--- !u!23 &208630497246430155
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2704261259249796636}
+  m_GameObject: {fileID: 3183676631877501890}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -872,13 +1326,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3912653429192782757
+--- !u!114 &1386644020982558281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2704261259249796636}
+  m_GameObject: {fileID: 3183676631877501890}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
@@ -898,7 +1352,7 @@ MonoBehaviour:
   spatialFrequencyVariation: 0.5
   directionYawVariationDegrees: 22
   lineIndexOffsetStrength: 0.65
---- !u!1 &3697916665389557250
+--- !u!1 &3644077721876403857
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -906,25 +1360,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1619119740278956330}
-  - component: {fileID: 8526843482048523398}
-  - component: {fileID: 1644349130421959187}
-  - component: {fileID: 3493240753870376480}
-  - component: {fileID: 3468364006013877210}
+  - component: {fileID: 4856957856641280249}
+  - component: {fileID: 6267983776233398617}
+  - component: {fileID: 8095736167278188916}
+  - component: {fileID: 1836961581919641548}
+  - component: {fileID: 4760873822182344971}
   m_Layer: 0
-  m_Name: AutoCable_01_02
+  m_Name: AutoCable_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1619119740278956330
+--- !u!4 &4856957856641280249
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3697916665389557250}
+  m_GameObject: {fileID: 3644077721876403857}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -933,21 +1387,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5258146909306457060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8526843482048523398
+--- !u!114 &6267983776233398617
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3697916665389557250}
+  m_GameObject: {fileID: 3644077721876403857}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
   mode: 0
-  startPoint: {fileID: 5531310421453611108}
-  endPoint: {fileID: 2724950184390380007}
+  startPoint: {fileID: 7117420166395617191}
+  endPoint: {fileID: 852862215297414692}
   localStartPoint: {x: -2, y: 0, z: 0}
   localEndPoint: {x: 2, y: 0, z: 0}
   useEndpointRotation: 1
@@ -965,10 +1419,10 @@ MonoBehaviour:
   brokenEndDrop: 0.45
   brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
   windSway: 1
-  windAmplitude: 0.03713987
-  windSpeed: 4.400991
-  windSpatialFrequency: 0.10006533
-  windDirection: {x: 0.8768414, y: 0, z: 0.48077977}
+  windAmplitude: 0.044818424
+  windSpeed: 3.0054069
+  windSpatialFrequency: 0.15764129
+  windDirection: {x: 0.8483078, y: 0, z: 0.5295035}
   endpointWindLock: 1
   useDistanceLod: 1
   lodCamera: {fileID: 0}
@@ -984,8 +1438,8 @@ MonoBehaviour:
   disableBeyondFarDistance: 0
   visualMode: 1
   lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 1644349130421959187}
-  meshRenderer: {fileID: 3493240753870376480}
+  meshFilter: {fileID: 8095736167278188916}
+  meshRenderer: {fileID: 1836961581919641548}
   cableWidth: 0.025
   radialSegments: 6
   cableMaterial: {fileID: 0}
@@ -1000,21 +1454,21 @@ MonoBehaviour:
   rebuildInEditMode: 1
   drawGizmos: 1
   gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &1644349130421959187
+--- !u!33 &8095736167278188916
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3697916665389557250}
+  m_GameObject: {fileID: 3644077721876403857}
   m_Mesh: {fileID: 0}
---- !u!23 &3493240753870376480
+--- !u!23 &1836961581919641548
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3697916665389557250}
+  m_GameObject: {fileID: 3644077721876403857}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1057,13 +1511,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3468364006013877210
+--- !u!114 &4760873822182344971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3697916665389557250}
+  m_GameObject: {fileID: 3644077721876403857}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
@@ -1083,7 +1537,7 @@ MonoBehaviour:
   spatialFrequencyVariation: 0.5
   directionYawVariationDegrees: 22
   lineIndexOffsetStrength: 0.65
---- !u!1 &3787289382837677887
+--- !u!1 &3896248809403282141
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1091,196 +1545,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3514146349299599054}
-  - component: {fileID: 3117229396017304030}
-  - component: {fileID: 2836609860699181296}
-  - component: {fileID: 1646510046986677646}
-  - component: {fileID: 5699881629912013543}
-  m_Layer: 0
-  m_Name: AutoCable_05_01
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3514146349299599054
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3787289382837677887}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5258146909306457060}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3117229396017304030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3787289382837677887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
-  mode: 0
-  startPoint: {fileID: 5739270090295176053}
-  endPoint: {fileID: 3155581360891896805}
-  localStartPoint: {x: -2, y: 0, z: 0}
-  localEndPoint: {x: 2, y: 0, z: 0}
-  useEndpointRotation: 1
-  startRollDegrees: 0
-  endRollDegrees: 0
-  segments: 20
-  sag: 0.28
-  worldSideOffset: {x: 0, y: 0, z: 0}
-  autoSagFromDistance: 1
-  sagPerMeter: 0.045
-  maxAutoSag: 1.4
-  brokenCable: 0
-  breakNormalizedPosition: 0.5
-  breakGapNormalized: 0.08
-  brokenEndDrop: 0.45
-  brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
-  windSway: 1
-  windAmplitude: 0.056476463
-  windSpeed: 3.0650234
-  windSpatialFrequency: 0.08407152
-  windDirection: {x: 0.99517757, y: 0, z: -0.09809032}
-  endpointWindLock: 1
-  useDistanceLod: 1
-  lodCamera: {fileID: 0}
-  nearDistance: 60
-  midDistance: 140
-  farDistance: 240
-  nearSegments: 48
-  midSegments: 32
-  farSegments: 18
-  nearRadialSegments: 12
-  midRadialSegments: 10
-  farRadialSegments: 6
-  disableBeyondFarDistance: 0
-  visualMode: 1
-  lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 2836609860699181296}
-  meshRenderer: {fileID: 1646510046986677646}
-  cableWidth: 0.025
-  radialSegments: 6
-  cableMaterial: {fileID: 0}
-  cableColor: {r: 0.005, g: 0.005, b: 0.004, a: 1}
-  useWorldSpace: 1
-  invertNormals: 0
-  bakedStatic: 0
-  bakedKeepsWind: 1
-  bakedMesh: {fileID: 0}
-  bakedSegments: 0
-  bakedRadialSegments: 0
-  rebuildInEditMode: 1
-  drawGizmos: 1
-  gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &2836609860699181296
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3787289382837677887}
-  m_Mesh: {fileID: 0}
---- !u!23 &1646510046986677646
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3787289382837677887}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5699881629912013543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3787289382837677887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableWindVariation
-  applyOnEnable: 1
-  applyInEditMode: 1
-  overwriteExistingWindValues: 1
-  baseAmplitude: 0.04
-  baseSpeed: 3.32
-  baseSpatialFrequency: 0.14
-  baseDirection: {x: 1, y: 0, z: 0.25}
-  endpointWindLock: 1
-  seedOffset: 0
-  amplitudeVariation: 0.45
-  speedVariation: 0.35
-  spatialFrequencyVariation: 0.5
-  directionYawVariationDegrees: 22
-  lineIndexOffsetStrength: 0.65
---- !u!1 &4075469478957766698
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 458158151299750711}
-  - component: {fileID: 875179808981365440}
-  - component: {fileID: 7480111507857030245}
-  - component: {fileID: 6645463897146113217}
-  - component: {fileID: 2288141262528760275}
+  - component: {fileID: 3615254775339952057}
+  - component: {fileID: 8365229032694764734}
+  - component: {fileID: 1436840730601509664}
+  - component: {fileID: 7787357670896681490}
+  - component: {fileID: 8551132705637969349}
   m_Layer: 0
   m_Name: AutoCable_03_01
   m_TagString: Untagged
@@ -1288,13 +1557,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &458158151299750711
+--- !u!4 &3615254775339952057
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4075469478957766698}
+  m_GameObject: {fileID: 3896248809403282141}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1303,13 +1572,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5258146909306457060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &875179808981365440
+--- !u!114 &8365229032694764734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4075469478957766698}
+  m_GameObject: {fileID: 3896248809403282141}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
@@ -1354,8 +1623,8 @@ MonoBehaviour:
   disableBeyondFarDistance: 0
   visualMode: 1
   lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 7480111507857030245}
-  meshRenderer: {fileID: 6645463897146113217}
+  meshFilter: {fileID: 1436840730601509664}
+  meshRenderer: {fileID: 7787357670896681490}
   cableWidth: 0.025
   radialSegments: 6
   cableMaterial: {fileID: 0}
@@ -1370,21 +1639,21 @@ MonoBehaviour:
   rebuildInEditMode: 1
   drawGizmos: 1
   gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &7480111507857030245
+--- !u!33 &1436840730601509664
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4075469478957766698}
+  m_GameObject: {fileID: 3896248809403282141}
   m_Mesh: {fileID: 0}
---- !u!23 &6645463897146113217
+--- !u!23 &7787357670896681490
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4075469478957766698}
+  m_GameObject: {fileID: 3896248809403282141}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1427,13 +1696,568 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2288141262528760275
+--- !u!114 &8551132705637969349
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4075469478957766698}
+  m_GameObject: {fileID: 3896248809403282141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableWindVariation
+  applyOnEnable: 1
+  applyInEditMode: 1
+  overwriteExistingWindValues: 1
+  baseAmplitude: 0.04
+  baseSpeed: 3.32
+  baseSpatialFrequency: 0.14
+  baseDirection: {x: 1, y: 0, z: 0.25}
+  endpointWindLock: 1
+  seedOffset: 0
+  amplitudeVariation: 0.45
+  speedVariation: 0.35
+  spatialFrequencyVariation: 0.5
+  directionYawVariationDegrees: 22
+  lineIndexOffsetStrength: 0.65
+--- !u!1 &4008978300802960321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8786546045192577527}
+  - component: {fileID: 1393426252892709475}
+  - component: {fileID: 2449532643777949607}
+  - component: {fileID: 4243337556932603011}
+  - component: {fileID: 5566847540778795712}
+  m_Layer: 0
+  m_Name: AutoCable_01_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8786546045192577527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4008978300802960321}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5258146909306457060}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1393426252892709475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4008978300802960321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
+  mode: 0
+  startPoint: {fileID: 5531310421453611108}
+  endPoint: {fileID: 2724950184390380007}
+  localStartPoint: {x: -2, y: 0, z: 0}
+  localEndPoint: {x: 2, y: 0, z: 0}
+  useEndpointRotation: 1
+  startRollDegrees: 0
+  endRollDegrees: 0
+  segments: 20
+  sag: 0.28
+  worldSideOffset: {x: 0, y: 0, z: 0}
+  autoSagFromDistance: 1
+  sagPerMeter: 0.045
+  maxAutoSag: 1.4
+  brokenCable: 0
+  breakNormalizedPosition: 0.5
+  breakGapNormalized: 0.08
+  brokenEndDrop: 0.45
+  brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
+  windSway: 1
+  windAmplitude: 0.03713987
+  windSpeed: 4.400991
+  windSpatialFrequency: 0.10006533
+  windDirection: {x: 0.8768414, y: 0, z: 0.48077977}
+  endpointWindLock: 1
+  useDistanceLod: 1
+  lodCamera: {fileID: 0}
+  nearDistance: 60
+  midDistance: 140
+  farDistance: 240
+  nearSegments: 48
+  midSegments: 32
+  farSegments: 18
+  nearRadialSegments: 12
+  midRadialSegments: 10
+  farRadialSegments: 6
+  disableBeyondFarDistance: 0
+  visualMode: 1
+  lineRenderer: {fileID: 0}
+  meshFilter: {fileID: 2449532643777949607}
+  meshRenderer: {fileID: 4243337556932603011}
+  cableWidth: 0.025
+  radialSegments: 6
+  cableMaterial: {fileID: 0}
+  cableColor: {r: 0.005, g: 0.005, b: 0.004, a: 1}
+  useWorldSpace: 1
+  invertNormals: 0
+  bakedStatic: 0
+  bakedKeepsWind: 1
+  bakedMesh: {fileID: 0}
+  bakedSegments: 0
+  bakedRadialSegments: 0
+  rebuildInEditMode: 1
+  drawGizmos: 1
+  gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
+--- !u!33 &2449532643777949607
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4008978300802960321}
+  m_Mesh: {fileID: 0}
+--- !u!23 &4243337556932603011
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4008978300802960321}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5566847540778795712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4008978300802960321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableWindVariation
+  applyOnEnable: 1
+  applyInEditMode: 1
+  overwriteExistingWindValues: 1
+  baseAmplitude: 0.04
+  baseSpeed: 3.32
+  baseSpatialFrequency: 0.14
+  baseDirection: {x: 1, y: 0, z: 0.25}
+  endpointWindLock: 1
+  seedOffset: 0
+  amplitudeVariation: 0.45
+  speedVariation: 0.35
+  spatialFrequencyVariation: 0.5
+  directionYawVariationDegrees: 22
+  lineIndexOffsetStrength: 0.65
+--- !u!1 &4015303171181430016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7639520386931202294}
+  - component: {fileID: 2009566681628033158}
+  - component: {fileID: 3466617285077527760}
+  - component: {fileID: 5328978082811797149}
+  - component: {fileID: 7355075436969765594}
+  m_Layer: 0
+  m_Name: AutoCable_02_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7639520386931202294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015303171181430016}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5258146909306457060}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2009566681628033158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015303171181430016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
+  mode: 0
+  startPoint: {fileID: 2724950184390380007}
+  endPoint: {fileID: 204735784243984016}
+  localStartPoint: {x: -2, y: 0, z: 0}
+  localEndPoint: {x: 2, y: 0, z: 0}
+  useEndpointRotation: 1
+  startRollDegrees: 0
+  endRollDegrees: 0
+  segments: 20
+  sag: 0.28
+  worldSideOffset: {x: 0, y: 0, z: 0}
+  autoSagFromDistance: 1
+  sagPerMeter: 0.045
+  maxAutoSag: 1.4
+  brokenCable: 0
+  breakNormalizedPosition: 0.5
+  breakGapNormalized: 0.08
+  brokenEndDrop: 0.45
+  brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
+  windSway: 1
+  windAmplitude: 0.047024563
+  windSpeed: 3.559742
+  windSpatialFrequency: 0.09696621
+  windDirection: {x: 0.9959085, y: 0, z: 0.09036764}
+  endpointWindLock: 1
+  useDistanceLod: 1
+  lodCamera: {fileID: 0}
+  nearDistance: 60
+  midDistance: 140
+  farDistance: 240
+  nearSegments: 48
+  midSegments: 32
+  farSegments: 18
+  nearRadialSegments: 12
+  midRadialSegments: 10
+  farRadialSegments: 6
+  disableBeyondFarDistance: 0
+  visualMode: 1
+  lineRenderer: {fileID: 0}
+  meshFilter: {fileID: 3466617285077527760}
+  meshRenderer: {fileID: 5328978082811797149}
+  cableWidth: 0.025
+  radialSegments: 6
+  cableMaterial: {fileID: 0}
+  cableColor: {r: 0.005, g: 0.005, b: 0.004, a: 1}
+  useWorldSpace: 1
+  invertNormals: 0
+  bakedStatic: 0
+  bakedKeepsWind: 1
+  bakedMesh: {fileID: 0}
+  bakedSegments: 0
+  bakedRadialSegments: 0
+  rebuildInEditMode: 1
+  drawGizmos: 1
+  gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
+--- !u!33 &3466617285077527760
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015303171181430016}
+  m_Mesh: {fileID: 0}
+--- !u!23 &5328978082811797149
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015303171181430016}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7355075436969765594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015303171181430016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableWindVariation
+  applyOnEnable: 1
+  applyInEditMode: 1
+  overwriteExistingWindValues: 1
+  baseAmplitude: 0.04
+  baseSpeed: 3.32
+  baseSpatialFrequency: 0.14
+  baseDirection: {x: 1, y: 0, z: 0.25}
+  endpointWindLock: 1
+  seedOffset: 0
+  amplitudeVariation: 0.45
+  speedVariation: 0.35
+  spatialFrequencyVariation: 0.5
+  directionYawVariationDegrees: 22
+  lineIndexOffsetStrength: 0.65
+--- !u!1 &4278742872844786377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4370659442306075263}
+  - component: {fileID: 1594535885920050799}
+  - component: {fileID: 2619645980921029477}
+  - component: {fileID: 8344569479052600906}
+  - component: {fileID: 2307661482754814538}
+  m_Layer: 0
+  m_Name: AutoCable_05_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4370659442306075263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4278742872844786377}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5258146909306457060}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1594535885920050799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4278742872844786377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
+  mode: 0
+  startPoint: {fileID: 5739270090295176053}
+  endPoint: {fileID: 3155581360891896805}
+  localStartPoint: {x: -2, y: 0, z: 0}
+  localEndPoint: {x: 2, y: 0, z: 0}
+  useEndpointRotation: 1
+  startRollDegrees: 0
+  endRollDegrees: 0
+  segments: 20
+  sag: 0.28
+  worldSideOffset: {x: 0, y: 0, z: 0}
+  autoSagFromDistance: 1
+  sagPerMeter: 0.045
+  maxAutoSag: 1.4
+  brokenCable: 0
+  breakNormalizedPosition: 0.5
+  breakGapNormalized: 0.08
+  brokenEndDrop: 0.45
+  brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
+  windSway: 1
+  windAmplitude: 0.056476463
+  windSpeed: 3.0650234
+  windSpatialFrequency: 0.08407152
+  windDirection: {x: 0.99517757, y: 0, z: -0.09809032}
+  endpointWindLock: 1
+  useDistanceLod: 1
+  lodCamera: {fileID: 0}
+  nearDistance: 60
+  midDistance: 140
+  farDistance: 240
+  nearSegments: 48
+  midSegments: 32
+  farSegments: 18
+  nearRadialSegments: 12
+  midRadialSegments: 10
+  farRadialSegments: 6
+  disableBeyondFarDistance: 0
+  visualMode: 1
+  lineRenderer: {fileID: 0}
+  meshFilter: {fileID: 2619645980921029477}
+  meshRenderer: {fileID: 8344569479052600906}
+  cableWidth: 0.025
+  radialSegments: 6
+  cableMaterial: {fileID: 0}
+  cableColor: {r: 0.005, g: 0.005, b: 0.004, a: 1}
+  useWorldSpace: 1
+  invertNormals: 0
+  bakedStatic: 0
+  bakedKeepsWind: 1
+  bakedMesh: {fileID: 0}
+  bakedSegments: 0
+  bakedRadialSegments: 0
+  rebuildInEditMode: 1
+  drawGizmos: 1
+  gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
+--- !u!33 &2619645980921029477
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4278742872844786377}
+  m_Mesh: {fileID: 0}
+--- !u!23 &8344569479052600906
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4278742872844786377}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2307661482754814538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4278742872844786377}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
@@ -1489,21 +2313,21 @@ Transform:
   - {fileID: 7623553943117167482}
   - {fileID: 5348235795746687745}
   - {fileID: 3339378600097727377}
-  - {fileID: 5072601730687997371}
-  - {fileID: 1619119740278956330}
-  - {fileID: 8954418735170741212}
-  - {fileID: 6320031309870703396}
-  - {fileID: 6336601091992187527}
-  - {fileID: 2838645207167028562}
-  - {fileID: 458158151299750711}
-  - {fileID: 8970887095487434309}
-  - {fileID: 3809777909700699487}
-  - {fileID: 3732148492035309120}
-  - {fileID: 8165448809173190611}
-  - {fileID: 7129514259778137927}
-  - {fileID: 3514146349299599054}
-  - {fileID: 7008890550663893823}
-  - {fileID: 28229719608126057}
+  - {fileID: 4856957856641280249}
+  - {fileID: 8786546045192577527}
+  - {fileID: 2790718180220399603}
+  - {fileID: 6343786564026236330}
+  - {fileID: 7639520386931202294}
+  - {fileID: 4455908095298724823}
+  - {fileID: 3615254775339952057}
+  - {fileID: 5299200574804569769}
+  - {fileID: 3303371699075021595}
+  - {fileID: 8832451065111858988}
+  - {fileID: 7116910599274247781}
+  - {fileID: 2087307923057306658}
+  - {fileID: 4370659442306075263}
+  - {fileID: 8688101956754037256}
+  - {fileID: 6153684467409651852}
   m_Father: {fileID: 302101791003753576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6914881513812157334
@@ -1563,7 +2387,7 @@ MonoBehaviour:
   farRadialSegments: 6
   disableBeyondFarDistance: 0
   bakedKeepsWind: 1
---- !u!1 &4539903265584488688
+--- !u!1 &4633804152611841894
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1571,25 +2395,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8165448809173190611}
-  - component: {fileID: 5661050749850609067}
-  - component: {fileID: 2693790463293462087}
-  - component: {fileID: 2419111740395860075}
-  - component: {fileID: 2427895365930185895}
+  - component: {fileID: 8688101956754037256}
+  - component: {fileID: 894999448371214397}
+  - component: {fileID: 5232000806682279170}
+  - component: {fileID: 4254235602814125105}
+  - component: {fileID: 4533849350495203204}
   m_Layer: 0
-  m_Name: AutoCable_04_02
+  m_Name: AutoCable_05_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8165448809173190611
+--- !u!4 &8688101956754037256
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4539903265584488688}
+  m_GameObject: {fileID: 4633804152611841894}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1598,21 +2422,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5258146909306457060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5661050749850609067
+--- !u!114 &894999448371214397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4539903265584488688}
+  m_GameObject: {fileID: 4633804152611841894}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
   mode: 0
-  startPoint: {fileID: 4779577199840453837}
-  endPoint: {fileID: 7034892921317856438}
+  startPoint: {fileID: 7034892921317856438}
+  endPoint: {fileID: 418815990060604454}
   localStartPoint: {x: -2, y: 0, z: 0}
   localEndPoint: {x: 2, y: 0, z: 0}
   useEndpointRotation: 1
@@ -1630,10 +2454,10 @@ MonoBehaviour:
   brokenEndDrop: 0.45
   brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
   windSway: 1
-  windAmplitude: 0.049699247
-  windSpeed: 3.0783217
-  windSpatialFrequency: 0.11488443
-  windDirection: {x: 0.95178133, y: 0, z: 0.3067774}
+  windAmplitude: 0.053715575
+  windSpeed: 4.1785088
+  windSpatialFrequency: 0.2015113
+  windDirection: {x: 0.88990873, y: 0, z: 0.45613867}
   endpointWindLock: 1
   useDistanceLod: 1
   lodCamera: {fileID: 0}
@@ -1649,8 +2473,8 @@ MonoBehaviour:
   disableBeyondFarDistance: 0
   visualMode: 1
   lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 2693790463293462087}
-  meshRenderer: {fileID: 2419111740395860075}
+  meshFilter: {fileID: 5232000806682279170}
+  meshRenderer: {fileID: 4254235602814125105}
   cableWidth: 0.025
   radialSegments: 6
   cableMaterial: {fileID: 0}
@@ -1665,21 +2489,21 @@ MonoBehaviour:
   rebuildInEditMode: 1
   drawGizmos: 1
   gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &2693790463293462087
+--- !u!33 &5232000806682279170
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4539903265584488688}
+  m_GameObject: {fileID: 4633804152611841894}
   m_Mesh: {fileID: 0}
---- !u!23 &2419111740395860075
+--- !u!23 &4254235602814125105
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4539903265584488688}
+  m_GameObject: {fileID: 4633804152611841894}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1722,13 +2546,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2427895365930185895
+--- !u!114 &4533849350495203204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4539903265584488688}
+  m_GameObject: {fileID: 4633804152611841894}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
@@ -1748,7 +2572,7 @@ MonoBehaviour:
   spatialFrequencyVariation: 0.5
   directionYawVariationDegrees: 22
   lineIndexOffsetStrength: 0.65
---- !u!1 &4755673852795452271
+--- !u!1 &4787541641041268374
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1756,25 +2580,139 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 28229719608126057}
-  - component: {fileID: 8393163253858511713}
-  - component: {fileID: 1335737127207819085}
-  - component: {fileID: 3770413176830051590}
-  - component: {fileID: 1465638802202782913}
+  - component: {fileID: 3813119381111405787}
+  - component: {fileID: 1290214742233148588}
+  - component: {fileID: 76797830240782437}
+  - component: {fileID: 1213211020486351940}
   m_Layer: 0
-  m_Name: AutoCable_05_03
+  m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &28229719608126057
+--- !u!4 &3813119381111405787
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4755673852795452271}
+  m_GameObject: {fileID: 4787541641041268374}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.13668251, y: 5.799999, z: 22.35}
+  m_LocalScale: {x: 0.6729599, y: 11.919608, z: 0.67296}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 302101791003753576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!33 &1290214742233148588
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4787541641041268374}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &76797830240782437
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4787541641041268374}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 08f1899e69f8d2b46b3133a3741cbf72, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &1213211020486351940
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4787541641041268374}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!1 &5186282116262089396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3303371699075021595}
+  - component: {fileID: 6954867577999073120}
+  - component: {fileID: 2610180276289251230}
+  - component: {fileID: 183263581245175151}
+  - component: {fileID: 8790928562999402757}
+  m_Layer: 0
+  m_Name: AutoCable_03_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3303371699075021595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5186282116262089396}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1783,13 +2721,425 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5258146909306457060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8393163253858511713
+--- !u!114 &6954867577999073120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4755673852795452271}
+  m_GameObject: {fileID: 5186282116262089396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
+  mode: 0
+  startPoint: {fileID: 1666670545474619665}
+  endPoint: {fileID: 6314629660952533836}
+  localStartPoint: {x: -2, y: 0, z: 0}
+  localEndPoint: {x: 2, y: 0, z: 0}
+  useEndpointRotation: 1
+  startRollDegrees: 0
+  endRollDegrees: 0
+  segments: 20
+  sag: 0.28
+  worldSideOffset: {x: 0, y: 0, z: 0}
+  autoSagFromDistance: 1
+  sagPerMeter: 0.045
+  maxAutoSag: 1.4
+  brokenCable: 0
+  breakNormalizedPosition: 0.5
+  breakGapNormalized: 0.08
+  brokenEndDrop: 0.45
+  brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
+  windSway: 1
+  windAmplitude: 0.035606902
+  windSpeed: 3.7937033
+  windSpatialFrequency: 0.0930677
+  windDirection: {x: 0.95169747, y: 0, z: 0.30703756}
+  endpointWindLock: 1
+  useDistanceLod: 1
+  lodCamera: {fileID: 0}
+  nearDistance: 60
+  midDistance: 140
+  farDistance: 240
+  nearSegments: 48
+  midSegments: 32
+  farSegments: 18
+  nearRadialSegments: 12
+  midRadialSegments: 10
+  farRadialSegments: 6
+  disableBeyondFarDistance: 0
+  visualMode: 1
+  lineRenderer: {fileID: 0}
+  meshFilter: {fileID: 2610180276289251230}
+  meshRenderer: {fileID: 183263581245175151}
+  cableWidth: 0.025
+  radialSegments: 6
+  cableMaterial: {fileID: 0}
+  cableColor: {r: 0.005, g: 0.005, b: 0.004, a: 1}
+  useWorldSpace: 1
+  invertNormals: 0
+  bakedStatic: 0
+  bakedKeepsWind: 1
+  bakedMesh: {fileID: 0}
+  bakedSegments: 0
+  bakedRadialSegments: 0
+  rebuildInEditMode: 1
+  drawGizmos: 1
+  gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
+--- !u!33 &2610180276289251230
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5186282116262089396}
+  m_Mesh: {fileID: 0}
+--- !u!23 &183263581245175151
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5186282116262089396}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8790928562999402757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5186282116262089396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableWindVariation
+  applyOnEnable: 1
+  applyInEditMode: 1
+  overwriteExistingWindValues: 1
+  baseAmplitude: 0.04
+  baseSpeed: 3.32
+  baseSpatialFrequency: 0.14
+  baseDirection: {x: 1, y: 0, z: 0.25}
+  endpointWindLock: 1
+  seedOffset: 0
+  amplitudeVariation: 0.45
+  speedVariation: 0.35
+  spatialFrequencyVariation: 0.5
+  directionYawVariationDegrees: 22
+  lineIndexOffsetStrength: 0.65
+--- !u!1 &5987107058932875648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6462188365751228740}
+  - component: {fileID: 8963297543086565421}
+  - component: {fileID: 2070352005849840964}
+  - component: {fileID: 4663231626123978574}
+  m_Layer: 0
+  m_Name: Cylinder (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6462188365751228740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987107058932875648}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.11668253, y: -6.7299995, z: 23.199999}
+  m_LocalScale: {x: 0.6729599, y: 9.442356, z: 0.67296}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 302101791003753576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!33 &8963297543086565421
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987107058932875648}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2070352005849840964
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987107058932875648}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 08f1899e69f8d2b46b3133a3741cbf72, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &4663231626123978574
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987107058932875648}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!1 &7397412782313564452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3894827629130964214}
+  - component: {fileID: 7975535748453105081}
+  - component: {fileID: 1478249798380519382}
+  - component: {fileID: 1236607173198965765}
+  m_Layer: 0
+  m_Name: Plane (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3894827629130964214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7397412782313564452}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.36668253, y: 23.740002, z: 22.68}
+  m_LocalScale: {x: 19.19751, y: 4.779186, z: 22.669294}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 302101791003753576}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!33 &7975535748453105081
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7397412782313564452}
+  m_Mesh: {fileID: 4300000, guid: c07249e1a3b20354381f0399b854eb1c, type: 2}
+--- !u!23 &1478249798380519382
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7397412782313564452}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cc8cab68290e3674199cf8b0e464288e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1236607173198965765
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7397412782313564452}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &7647865236914422352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6153684467409651852}
+  - component: {fileID: 2085208374868910452}
+  - component: {fileID: 8431127006971173267}
+  - component: {fileID: 6915905983466242515}
+  - component: {fileID: 7670969153276230033}
+  m_Layer: 0
+  m_Name: AutoCable_05_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6153684467409651852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7647865236914422352}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5258146909306457060}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2085208374868910452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7647865236914422352}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
@@ -1834,8 +3184,8 @@ MonoBehaviour:
   disableBeyondFarDistance: 0
   visualMode: 1
   lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 1335737127207819085}
-  meshRenderer: {fileID: 3770413176830051590}
+  meshFilter: {fileID: 8431127006971173267}
+  meshRenderer: {fileID: 6915905983466242515}
   cableWidth: 0.025
   radialSegments: 6
   cableMaterial: {fileID: 0}
@@ -1850,21 +3200,21 @@ MonoBehaviour:
   rebuildInEditMode: 1
   drawGizmos: 1
   gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &1335737127207819085
+--- !u!33 &8431127006971173267
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4755673852795452271}
+  m_GameObject: {fileID: 7647865236914422352}
   m_Mesh: {fileID: 0}
---- !u!23 &3770413176830051590
+--- !u!23 &6915905983466242515
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4755673852795452271}
+  m_GameObject: {fileID: 7647865236914422352}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1907,13 +3257,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1465638802202782913
+--- !u!114 &7670969153276230033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4755673852795452271}
+  m_GameObject: {fileID: 7647865236914422352}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
@@ -1933,7 +3283,7 @@ MonoBehaviour:
   spatialFrequencyVariation: 0.5
   directionYawVariationDegrees: 22
   lineIndexOffsetStrength: 0.65
---- !u!1 &7963788508773235680
+--- !u!1 &7722203187863960226
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1941,25 +3291,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5072601730687997371}
-  - component: {fileID: 3605372255973534828}
-  - component: {fileID: 1321029869852196630}
-  - component: {fileID: 1590851269904196335}
-  - component: {fileID: 1917885877153742721}
+  - component: {fileID: 7116910599274247781}
+  - component: {fileID: 1933427078339035261}
+  - component: {fileID: 6575964601719178981}
+  - component: {fileID: 6964770076550670330}
+  - component: {fileID: 2069663903814464966}
   m_Layer: 0
-  m_Name: AutoCable_01_01
+  m_Name: AutoCable_04_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5072601730687997371
+--- !u!4 &7116910599274247781
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7963788508773235680}
+  m_GameObject: {fileID: 7722203187863960226}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1968,21 +3318,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5258146909306457060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3605372255973534828
+--- !u!114 &1933427078339035261
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7963788508773235680}
+  m_GameObject: {fileID: 7722203187863960226}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
   mode: 0
-  startPoint: {fileID: 7117420166395617191}
-  endPoint: {fileID: 852862215297414692}
+  startPoint: {fileID: 4779577199840453837}
+  endPoint: {fileID: 7034892921317856438}
   localStartPoint: {x: -2, y: 0, z: 0}
   localEndPoint: {x: 2, y: 0, z: 0}
   useEndpointRotation: 1
@@ -2000,10 +3350,10 @@ MonoBehaviour:
   brokenEndDrop: 0.45
   brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
   windSway: 1
-  windAmplitude: 0.044818424
-  windSpeed: 3.0054069
-  windSpatialFrequency: 0.15764129
-  windDirection: {x: 0.8483078, y: 0, z: 0.5295035}
+  windAmplitude: 0.049699247
+  windSpeed: 3.0783217
+  windSpatialFrequency: 0.11488443
+  windDirection: {x: 0.95178133, y: 0, z: 0.3067774}
   endpointWindLock: 1
   useDistanceLod: 1
   lodCamera: {fileID: 0}
@@ -2019,8 +3369,8 @@ MonoBehaviour:
   disableBeyondFarDistance: 0
   visualMode: 1
   lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 1321029869852196630}
-  meshRenderer: {fileID: 1590851269904196335}
+  meshFilter: {fileID: 6575964601719178981}
+  meshRenderer: {fileID: 6964770076550670330}
   cableWidth: 0.025
   radialSegments: 6
   cableMaterial: {fileID: 0}
@@ -2035,21 +3385,21 @@ MonoBehaviour:
   rebuildInEditMode: 1
   drawGizmos: 1
   gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &1321029869852196630
+--- !u!33 &6575964601719178981
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7963788508773235680}
+  m_GameObject: {fileID: 7722203187863960226}
   m_Mesh: {fileID: 0}
---- !u!23 &1590851269904196335
+--- !u!23 &6964770076550670330
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7963788508773235680}
+  m_GameObject: {fileID: 7722203187863960226}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -2092,13 +3442,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1917885877153742721
+--- !u!114 &2069663903814464966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7963788508773235680}
+  m_GameObject: {fileID: 7722203187863960226}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
@@ -2118,7 +3468,7 @@ MonoBehaviour:
   spatialFrequencyVariation: 0.5
   directionYawVariationDegrees: 22
   lineIndexOffsetStrength: 0.65
---- !u!1 &8394469169248208183
+--- !u!1 &8586977416171939846
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2126,25 +3476,138 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7129514259778137927}
-  - component: {fileID: 500961568105120688}
-  - component: {fileID: 3740183887817334273}
-  - component: {fileID: 7150019109923601771}
-  - component: {fileID: 955049728873717460}
+  - component: {fileID: 5746306555652425347}
+  - component: {fileID: 5998306324491463531}
+  - component: {fileID: 7320204873285093603}
+  - component: {fileID: 8267537467417529610}
   m_Layer: 0
-  m_Name: AutoCable_04_03
+  m_Name: Plane (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7129514259778137927
+--- !u!4 &5746306555652425347
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8394469169248208183}
+  m_GameObject: {fileID: 8586977416171939846}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.36668253, y: 12.880001, z: 22.33}
+  m_LocalScale: {x: 24.432085, y: 6.9332786, z: 22.669294}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 302101791003753576}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!33 &5998306324491463531
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586977416171939846}
+  m_Mesh: {fileID: 4300000, guid: c07249e1a3b20354381f0399b854eb1c, type: 2}
+--- !u!23 &7320204873285093603
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586977416171939846}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cc8cab68290e3674199cf8b0e464288e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8267537467417529610
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586977416171939846}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &8646078867416551615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4455908095298724823}
+  - component: {fileID: 8873366616512497119}
+  - component: {fileID: 4201923924099922125}
+  - component: {fileID: 753260437317637516}
+  - component: {fileID: 5628290969553066831}
+  m_Layer: 0
+  m_Name: AutoCable_02_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4455908095298724823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8646078867416551615}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2153,21 +3616,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5258146909306457060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &500961568105120688
+--- !u!114 &8873366616512497119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8394469169248208183}
+  m_GameObject: {fileID: 8646078867416551615}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
   mode: 0
-  startPoint: {fileID: 6314629660952533836}
-  endPoint: {fileID: 8383063460694256439}
+  startPoint: {fileID: 3469634126507292262}
+  endPoint: {fileID: 1666670545474619665}
   localStartPoint: {x: -2, y: 0, z: 0}
   localEndPoint: {x: 2, y: 0, z: 0}
   useEndpointRotation: 1
@@ -2185,10 +3648,10 @@ MonoBehaviour:
   brokenEndDrop: 0.45
   brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
   windSway: 1
-  windAmplitude: 0.023040844
-  windSpeed: 2.8276415
-  windSpatialFrequency: 0.10006305
-  windDirection: {x: 0.99946713, y: 0, z: -0.032643247}
+  windAmplitude: 0.044565022
+  windSpeed: 3.3129704
+  windSpatialFrequency: 0.19676474
+  windDirection: {x: 0.9582221, y: 0, z: 0.28602535}
   endpointWindLock: 1
   useDistanceLod: 1
   lodCamera: {fileID: 0}
@@ -2204,8 +3667,8 @@ MonoBehaviour:
   disableBeyondFarDistance: 0
   visualMode: 1
   lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 3740183887817334273}
-  meshRenderer: {fileID: 7150019109923601771}
+  meshFilter: {fileID: 4201923924099922125}
+  meshRenderer: {fileID: 753260437317637516}
   cableWidth: 0.025
   radialSegments: 6
   cableMaterial: {fileID: 0}
@@ -2220,21 +3683,21 @@ MonoBehaviour:
   rebuildInEditMode: 1
   drawGizmos: 1
   gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &3740183887817334273
+--- !u!33 &4201923924099922125
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8394469169248208183}
+  m_GameObject: {fileID: 8646078867416551615}
   m_Mesh: {fileID: 0}
---- !u!23 &7150019109923601771
+--- !u!23 &753260437317637516
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8394469169248208183}
+  m_GameObject: {fileID: 8646078867416551615}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -2277,13 +3740,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &955049728873717460
+--- !u!114 &5628290969553066831
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8394469169248208183}
+  m_GameObject: {fileID: 8646078867416551615}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
@@ -2461,7 +3924,7 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!1 &8730924311234119854
+--- !u!1 &8723764074256519796
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2469,196 +3932,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6336601091992187527}
-  - component: {fileID: 8737063337949136046}
-  - component: {fileID: 5197785846726652665}
-  - component: {fileID: 4561078209417576004}
-  - component: {fileID: 1735468506150375592}
-  m_Layer: 0
-  m_Name: AutoCable_02_02
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6336601091992187527
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8730924311234119854}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5258146909306457060}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8737063337949136046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8730924311234119854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
-  mode: 0
-  startPoint: {fileID: 2724950184390380007}
-  endPoint: {fileID: 204735784243984016}
-  localStartPoint: {x: -2, y: 0, z: 0}
-  localEndPoint: {x: 2, y: 0, z: 0}
-  useEndpointRotation: 1
-  startRollDegrees: 0
-  endRollDegrees: 0
-  segments: 20
-  sag: 0.28
-  worldSideOffset: {x: 0, y: 0, z: 0}
-  autoSagFromDistance: 1
-  sagPerMeter: 0.045
-  maxAutoSag: 1.4
-  brokenCable: 0
-  breakNormalizedPosition: 0.5
-  breakGapNormalized: 0.08
-  brokenEndDrop: 0.45
-  brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
-  windSway: 1
-  windAmplitude: 0.047024563
-  windSpeed: 3.559742
-  windSpatialFrequency: 0.09696621
-  windDirection: {x: 0.9959085, y: 0, z: 0.09036764}
-  endpointWindLock: 1
-  useDistanceLod: 1
-  lodCamera: {fileID: 0}
-  nearDistance: 60
-  midDistance: 140
-  farDistance: 240
-  nearSegments: 48
-  midSegments: 32
-  farSegments: 18
-  nearRadialSegments: 12
-  midRadialSegments: 10
-  farRadialSegments: 6
-  disableBeyondFarDistance: 0
-  visualMode: 1
-  lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 5197785846726652665}
-  meshRenderer: {fileID: 4561078209417576004}
-  cableWidth: 0.025
-  radialSegments: 6
-  cableMaterial: {fileID: 0}
-  cableColor: {r: 0.005, g: 0.005, b: 0.004, a: 1}
-  useWorldSpace: 1
-  invertNormals: 0
-  bakedStatic: 0
-  bakedKeepsWind: 1
-  bakedMesh: {fileID: 0}
-  bakedSegments: 0
-  bakedRadialSegments: 0
-  rebuildInEditMode: 1
-  drawGizmos: 1
-  gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &5197785846726652665
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8730924311234119854}
-  m_Mesh: {fileID: 0}
---- !u!23 &4561078209417576004
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8730924311234119854}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1735468506150375592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8730924311234119854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableWindVariation
-  applyOnEnable: 1
-  applyInEditMode: 1
-  overwriteExistingWindValues: 1
-  baseAmplitude: 0.04
-  baseSpeed: 3.32
-  baseSpatialFrequency: 0.14
-  baseDirection: {x: 1, y: 0, z: 0.25}
-  endpointWindLock: 1
-  seedOffset: 0
-  amplitudeVariation: 0.45
-  speedVariation: 0.35
-  spatialFrequencyVariation: 0.5
-  directionYawVariationDegrees: 22
-  lineIndexOffsetStrength: 0.65
---- !u!1 &8766727673156818173
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3732148492035309120}
-  - component: {fileID: 2898553282864393628}
-  - component: {fileID: 7639237290104787689}
-  - component: {fileID: 2456607677538702905}
-  - component: {fileID: 1067803729479387324}
+  - component: {fileID: 8832451065111858988}
+  - component: {fileID: 8730984004391931538}
+  - component: {fileID: 1895296873764566077}
+  - component: {fileID: 2620608723793861944}
+  - component: {fileID: 2029667838487105345}
   m_Layer: 0
   m_Name: AutoCable_04_01
   m_TagString: Untagged
@@ -2666,13 +3944,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3732148492035309120
+--- !u!4 &8832451065111858988
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8766727673156818173}
+  m_GameObject: {fileID: 8723764074256519796}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2681,13 +3959,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5258146909306457060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2898553282864393628
+--- !u!114 &8730984004391931538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8766727673156818173}
+  m_GameObject: {fileID: 8723764074256519796}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
@@ -2732,8 +4010,8 @@ MonoBehaviour:
   disableBeyondFarDistance: 0
   visualMode: 1
   lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 7639237290104787689}
-  meshRenderer: {fileID: 2456607677538702905}
+  meshFilter: {fileID: 1895296873764566077}
+  meshRenderer: {fileID: 2620608723793861944}
   cableWidth: 0.025
   radialSegments: 6
   cableMaterial: {fileID: 0}
@@ -2748,21 +4026,21 @@ MonoBehaviour:
   rebuildInEditMode: 1
   drawGizmos: 1
   gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &7639237290104787689
+--- !u!33 &1895296873764566077
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8766727673156818173}
+  m_GameObject: {fileID: 8723764074256519796}
   m_Mesh: {fileID: 0}
---- !u!23 &2456607677538702905
+--- !u!23 &2620608723793861944
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8766727673156818173}
+  m_GameObject: {fileID: 8723764074256519796}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -2805,13 +4083,13 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1067803729479387324
+--- !u!114 &2029667838487105345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8766727673156818173}
+  m_GameObject: {fileID: 8723764074256519796}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
@@ -2831,7 +4109,7 @@ MonoBehaviour:
   spatialFrequencyVariation: 0.5
   directionYawVariationDegrees: 22
   lineIndexOffsetStrength: 0.65
---- !u!1 &8912433137469492407
+--- !u!1 &8888056612655193888
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2839,115 +4117,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8970887095487434309}
-  - component: {fileID: 1662334921211204908}
-  - component: {fileID: 2810934781215021257}
-  - component: {fileID: 8715106859001332100}
-  - component: {fileID: 5367442101680467825}
+  - component: {fileID: 4060616011552957434}
+  - component: {fileID: 2865902566379177524}
+  - component: {fileID: 4971816734171129068}
+  - component: {fileID: 5947795983704646764}
   m_Layer: 0
-  m_Name: AutoCable_03_02
+  m_Name: Plane (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8970887095487434309
+--- !u!4 &4060616011552957434
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8912433137469492407}
+  m_GameObject: {fileID: 8888056612655193888}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.99929416, z: -0.037566576, w: 0}
+  m_LocalPosition: {x: 0.36668253, y: -0.49000168, z: 22.85}
+  m_LocalScale: {x: 20.204845, y: 6.366205, z: 22.669292}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5258146909306457060}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1662334921211204908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8912433137469492407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
-  mode: 0
-  startPoint: {fileID: 204735784243984016}
-  endPoint: {fileID: 4779577199840453837}
-  localStartPoint: {x: -2, y: 0, z: 0}
-  localEndPoint: {x: 2, y: 0, z: 0}
-  useEndpointRotation: 1
-  startRollDegrees: 0
-  endRollDegrees: 0
-  segments: 20
-  sag: 0.28
-  worldSideOffset: {x: 0, y: 0, z: 0}
-  autoSagFromDistance: 1
-  sagPerMeter: 0.045
-  maxAutoSag: 1.4
-  brokenCable: 0
-  breakNormalizedPosition: 0.5
-  breakGapNormalized: 0.08
-  brokenEndDrop: 0.45
-  brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
-  windSway: 1
-  windAmplitude: 0.028028432
-  windSpeed: 4.423888
-  windSpatialFrequency: 0.19772294
-  windDirection: {x: 0.9996892, y: 0, z: 0.024930902}
-  endpointWindLock: 1
-  useDistanceLod: 1
-  lodCamera: {fileID: 0}
-  nearDistance: 60
-  midDistance: 140
-  farDistance: 240
-  nearSegments: 48
-  midSegments: 32
-  farSegments: 18
-  nearRadialSegments: 12
-  midRadialSegments: 10
-  farRadialSegments: 6
-  disableBeyondFarDistance: 0
-  visualMode: 1
-  lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 2810934781215021257}
-  meshRenderer: {fileID: 8715106859001332100}
-  cableWidth: 0.025
-  radialSegments: 6
-  cableMaterial: {fileID: 0}
-  cableColor: {r: 0.005, g: 0.005, b: 0.004, a: 1}
-  useWorldSpace: 1
-  invertNormals: 0
-  bakedStatic: 0
-  bakedKeepsWind: 1
-  bakedMesh: {fileID: 0}
-  bakedSegments: 0
-  bakedRadialSegments: 0
-  rebuildInEditMode: 1
-  drawGizmos: 1
-  gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &2810934781215021257
+  m_Father: {fileID: 302101791003753576}
+  m_LocalEulerAnglesHint: {x: 4.306, y: 180, z: 0}
+--- !u!33 &2865902566379177524
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8912433137469492407}
-  m_Mesh: {fileID: 0}
---- !u!23 &8715106859001332100
+  m_GameObject: {fileID: 8888056612655193888}
+  m_Mesh: {fileID: 4300000, guid: c07249e1a3b20354381f0399b854eb1c, type: 2}
+--- !u!23 &4971816734171129068
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8912433137469492407}
+  m_GameObject: {fileID: 8888056612655193888}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -2966,7 +4176,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: cc8cab68290e3674199cf8b0e464288e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2990,217 +4200,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5367442101680467825
-MonoBehaviour:
+--- !u!64 &5947795983704646764
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8912433137469492407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableWindVariation
-  applyOnEnable: 1
-  applyInEditMode: 1
-  overwriteExistingWindValues: 1
-  baseAmplitude: 0.04
-  baseSpeed: 3.32
-  baseSpatialFrequency: 0.14
-  baseDirection: {x: 1, y: 0, z: 0.25}
-  endpointWindLock: 1
-  seedOffset: 0
-  amplitudeVariation: 0.45
-  speedVariation: 0.35
-  spatialFrequencyVariation: 0.5
-  directionYawVariationDegrees: 22
-  lineIndexOffsetStrength: 0.65
---- !u!1 &9118859732866620446
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7008890550663893823}
-  - component: {fileID: 3344660823490586291}
-  - component: {fileID: 1402179347120309205}
-  - component: {fileID: 1302861260365638246}
-  - component: {fileID: 7541808425246127206}
-  m_Layer: 0
-  m_Name: AutoCable_05_02
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7008890550663893823
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9118859732866620446}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5258146909306457060}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3344660823490586291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9118859732866620446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2167f9d719a582d47bc05772b6be5762, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableSpline
-  mode: 0
-  startPoint: {fileID: 7034892921317856438}
-  endPoint: {fileID: 418815990060604454}
-  localStartPoint: {x: -2, y: 0, z: 0}
-  localEndPoint: {x: 2, y: 0, z: 0}
-  useEndpointRotation: 1
-  startRollDegrees: 0
-  endRollDegrees: 0
-  segments: 20
-  sag: 0.28
-  worldSideOffset: {x: 0, y: 0, z: 0}
-  autoSagFromDistance: 1
-  sagPerMeter: 0.045
-  maxAutoSag: 1.4
-  brokenCable: 0
-  breakNormalizedPosition: 0.5
-  breakGapNormalized: 0.08
-  brokenEndDrop: 0.45
-  brokenEndSideOffset: {x: 0.12, y: 0, z: 0}
-  windSway: 1
-  windAmplitude: 0.053715575
-  windSpeed: 4.1785088
-  windSpatialFrequency: 0.2015113
-  windDirection: {x: 0.88990873, y: 0, z: 0.45613867}
-  endpointWindLock: 1
-  useDistanceLod: 1
-  lodCamera: {fileID: 0}
-  nearDistance: 60
-  midDistance: 140
-  farDistance: 240
-  nearSegments: 48
-  midSegments: 32
-  farSegments: 18
-  nearRadialSegments: 12
-  midRadialSegments: 10
-  farRadialSegments: 6
-  disableBeyondFarDistance: 0
-  visualMode: 1
-  lineRenderer: {fileID: 0}
-  meshFilter: {fileID: 1402179347120309205}
-  meshRenderer: {fileID: 1302861260365638246}
-  cableWidth: 0.025
-  radialSegments: 6
-  cableMaterial: {fileID: 0}
-  cableColor: {r: 0.005, g: 0.005, b: 0.004, a: 1}
-  useWorldSpace: 1
-  invertNormals: 0
-  bakedStatic: 0
-  bakedKeepsWind: 1
-  bakedMesh: {fileID: 0}
-  bakedSegments: 0
-  bakedRadialSegments: 0
-  rebuildInEditMode: 1
-  drawGizmos: 1
-  gizmoColor: {r: 1, g: 0.75, b: 0.2, a: 1}
---- !u!33 &1402179347120309205
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9118859732866620446}
-  m_Mesh: {fileID: 0}
---- !u!23 &1302861260365638246
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9118859732866620446}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7541808425246127206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9118859732866620446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d6c7891602439446859c43c5fded4bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableWindVariation
-  applyOnEnable: 1
-  applyInEditMode: 1
-  overwriteExistingWindValues: 1
-  baseAmplitude: 0.04
-  baseSpeed: 3.32
-  baseSpatialFrequency: 0.14
-  baseDirection: {x: 1, y: 0, z: 0.25}
-  endpointWindLock: 1
-  seedOffset: 0
-  amplitudeVariation: 0.45
-  speedVariation: 0.35
-  spatialFrequencyVariation: 0.5
-  directionYawVariationDegrees: 22
-  lineIndexOffsetStrength: 0.65
+  m_GameObject: {fileID: 8888056612655193888}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &186780437024288523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3752,6 +4773,33 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: af40765c2f6f99149ab1f2c4a105aebc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5258146909306457060}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: af40765c2f6f99149ab1f2c4a105aebc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3894827629130964214}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: af40765c2f6f99149ab1f2c4a105aebc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6265114070214852498}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: af40765c2f6f99149ab1f2c4a105aebc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5746306555652425347}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: af40765c2f6f99149ab1f2c4a105aebc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 520407042908997954}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: af40765c2f6f99149ab1f2c4a105aebc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4060616011552957434}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: af40765c2f6f99149ab1f2c4a105aebc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3566771049287857048}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: af40765c2f6f99149ab1f2c4a105aebc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 391912018358156134}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: af40765c2f6f99149ab1f2c4a105aebc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6462188365751228740}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: af40765c2f6f99149ab1f2c4a105aebc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3813119381111405787}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af40765c2f6f99149ab1f2c4a105aebc, type: 3}
 --- !u!4 &302101791003753576 stripped
