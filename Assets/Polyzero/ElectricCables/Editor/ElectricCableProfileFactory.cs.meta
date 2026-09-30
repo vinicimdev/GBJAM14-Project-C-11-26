@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d3f4411974ad8a4438d9c4ad9f2ea92f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 164400
+  packageName: Polyzero Free Procedural Power Line Generator
+  packageVersion: 1.2
+  assetPath: Assets/Polyzero/ElectricCables/Editor/ElectricCableProfileFactory.cs
+  uploadId: 986542

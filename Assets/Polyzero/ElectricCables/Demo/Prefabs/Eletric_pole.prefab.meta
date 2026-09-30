@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 38869277534985f409a45ba9ae2f119c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 164400
+  packageName: Polyzero Free Procedural Power Line Generator
+  packageVersion: 1.2
+  assetPath: Assets/Polyzero/ElectricCables/Demo/Prefabs/Eletric_pole.prefab
+  uploadId: 986542

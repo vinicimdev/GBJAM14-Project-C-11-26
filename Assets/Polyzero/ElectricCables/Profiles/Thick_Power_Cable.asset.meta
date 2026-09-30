@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7c8fda23aff903349b5784836812e548
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 164400
+  packageName: Polyzero Free Procedural Power Line Generator
+  packageVersion: 1.2
+  assetPath: Assets/Polyzero/ElectricCables/Profiles/Thick_Power_Cable.asset
+  uploadId: 986542

@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99cd7213420ae574ca834dc00efeb8cc, type: 3}
+  m_Name: Telephone_Wire
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Spline.ElectricCableProfile
+  segments: 20
+  sag: 0.28
+  autoSagFromDistance: 1
+  sagPerMeter: 0.045
+  maxAutoSag: 1.4
+  cableWidth: 0.025
+  radialSegments: 6
+  cableMaterial: {fileID: 0}
+  replaceUnsupportedMaterial: 1
+  createPipelineCompatibleMaterialWhenEmpty: 1
+  cableColor: {r: 0.005, g: 0.005, b: 0.004, a: 1}
+  cableSmoothness: 0.42
+  windSway: 1
+  windAmplitude: 0.045
+  windSpeed: 3.5
+  windSpatialFrequency: 0.2
+  windDirection: {x: 1, y: 0, z: 0.25}
+  addPerCableWindVariation: 1
+  useDistanceLod: 1
+  nearDistance: 35
+  midDistance: 80
+  farDistance: 140
+  nearSegments: 24
+  midSegments: 14
+  farSegments: 8
+  nearRadialSegments: 8
+  midRadialSegments: 6
+  farRadialSegments: 4
+  disableBeyondFarDistance: 0
+  useBreakGapMeters: 1
+  breakGapMeters: 0.55
+  breakGapNormalized: 0.035
+  brokenLooseEndLength: 1.25
+  brokenEndDrop: 0.75
+  brokenEndCurl: 0.18
+  brokenEndSideOffset: {x: 0.08, y: 0, z: 0}

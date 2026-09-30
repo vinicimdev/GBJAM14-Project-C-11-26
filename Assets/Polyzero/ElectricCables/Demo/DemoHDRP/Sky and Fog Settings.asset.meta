@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 210d887680af9c542a422278caff909f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 164400
+  packageName: Polyzero Free Procedural Power Line Generator
+  packageVersion: 1.2
+  assetPath: Assets/Polyzero/ElectricCables/Demo/DemoHDRP/Sky and Fog Settings.asset
+  uploadId: 986542
