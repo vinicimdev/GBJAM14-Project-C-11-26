@@ -5,17 +5,17 @@ using UnityEngine.InputSystem;
 public class CannonInteract : MonoBehaviour
 {
     [Header("Interaction")]
-    [SerializeField, Tooltip("Tempo (segundos) que precisa segurar pra confirmar o upgrade")]
+    [SerializeField, Tooltip("")]
     private float holdDurationForUpgrade = 1f;
 
     [Header("References")]
     [SerializeField, Tooltip("")]
     private CannonController cannon;
-    [SerializeField, Tooltip("O CharacterHealth do baú — de onde o HP do upgrade sai")]
+    [SerializeField, Tooltip("")]
     private CharacterHealth chestHealth;
 
     [Header("Upgrade Cost")]
-    [SerializeField, Tooltip("Quantos HP do baú custa cada upgrade")]
+    [SerializeField, Tooltip("")]
     private int upgradeHpCost = 5;
 
     [Header("Input")]
@@ -23,6 +23,7 @@ public class CannonInteract : MonoBehaviour
     private InputActionReference interactAction;
 
     private bool _playerInside;
+    private PlayerAmmoCarry _playerAmmo;
     private float _holdTimer;
     private bool _waitingForRelease;
     private bool _upgradeTriggeredThisHold;
@@ -47,6 +48,7 @@ public class CannonInteract : MonoBehaviour
         if (other.CompareTag("Player") == true)
         {
             _playerInside = true;
+            _playerAmmo = other.GetComponent<PlayerAmmoCarry>();
         }
     }
 
@@ -55,6 +57,7 @@ public class CannonInteract : MonoBehaviour
         if (other.CompareTag("Player") == true)
         {
             _playerInside = false;
+            _playerAmmo = null;
             _holdTimer = 0f;
             _upgradeTriggeredThisHold = false;
         }
@@ -98,7 +101,19 @@ public class CannonInteract : MonoBehaviour
         {
             if (_upgradeTriggeredThisHold == false)
             {
-                cannon.TryShoot();
+                bool reloaded = false;
+
+                if (_playerAmmo != null && _playerAmmo.CarryingAmmo == true && cannon.NeedsReload == true)
+                {
+                    cannon.Reload();
+                    _playerAmmo.ConsumeAll();
+                    reloaded = true;
+                }
+
+                if (reloaded == false)
+                {
+                    cannon.TryShoot();
+                }
             }
 
             _holdTimer = 0f;
